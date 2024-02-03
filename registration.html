@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -89,8 +89,8 @@
 
 
 
-        <!-- Content Start -->
-        <div class="content">
+           <!-- Content Start -->
+           <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
                 <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
@@ -103,45 +103,6 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-envelope me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Message</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <div class="d-flex align-items-center">
-                                    <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                                    <div class="ms-2">
-                                        <h6 class="fw-normal mb-0">Jhon send you a message</h6>
-                                        <small>15 minutes ago</small>
-                                    </div>
-                                </div>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all message</a>
-                        </div>
-                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
@@ -181,104 +142,148 @@
             </nav>
             <!-- Navbar End -->
 
-            <!-- Growth Param Start -->
-            <div class="container-fluid pt-4 py-0">
-                <div class="bg-light rounded-top p-4">
+            <!-- Child Registration Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <form>
-                            <h6 class="mb-0">Growth Parameters</h6>
-                            <div class="row mb-3">
-                                <label for="inputVisitDate" class="col-sm-3 col-form-label" style="text-align: right;">Date</label>
-                                <div class="col-sm-6">
-                                    <input type="date" class="form-control" id="inputVisitDate">
-                                </div>
-                            </div>
-                            <div class="row mb-0">
-                                <label for="inputPresentAge" class="col-sm-3 col-form-label" style="text-align: right;">Age</label>
-                                <div class="col-sm-6">
-                                    <div class="input-group mb-3">
-                                        <input type="age" class="form-control" aria-label="Months ( Age in months)" id="inputPresentAge">
-                                        <span class="input-group-text">Months</span>
-                                      </div>
-                                </div>
-                            </div>
-                            <div class="row mb-0">
-                                <label for="inputNewWeight" class="col-sm-3 col-form-label" style="text-align: right;">Weight</label>
-                                <div class="col-sm-6">
-                                    <div class="input-group mb-3">
-                                      <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputNewWeight">
-                                        <span class="input-group-text">KG</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-0">
-                                <label for="inputNewHeight" class="col-sm-3 col-form-label" style="text-align: right;">Height</label>
-                                <div class="col-sm-6">
-                                    <div class="input-group mb-3">
-                                      <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputNewHeight">
-                                        <span class="input-group-text">CM</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-2">
-                                <label for="inputRemark" class="col-sm-3 col-form-label" style="text-align: right;">Remarks</label>
-                                <div class="row-col-sm-12">
-                                    <input type="text" class="form-control-lg" id="inputRemark">
-                                </div>
-                            </div>
-                            <div class="row mb-2">
-                                <label for="inputInCharge" class="row 0-col-jm-2 col-form-label" style="text-align: right;">Name & signature</label>
-                                <div class="row-col-jm-2">
-                                    <input type="text" class="form-control" id="inputInCharge">
-                                </div>
-                            </div>
-                                <label for="inputNxtVisitDate" class="row 0-col-sm-4 col-form-label" style="text-align: right;">Date of Next appointment</label>
-                                <div class="col-sm-5">
-                                    <input type="date" class="form-control" id="inputNxtVisitDate">
-                                </div>
-                            </div>
-                        </form>
-                        <div class="row mb-4">
-                            <label  div class="row mb-2">*Weight should be measured for 0-1 year, quartely for 1-2 years, and half-yearly for 2-5yrs.</label>
-                            <div class="row mb-2">
-                             <label div class="row mb-2">**Height should be measured every 3 months from 0-2 years, and every 6 months from 2-5yrs.</label>
-                             
-                             <label div class="row mb-2">***If you measure MUAC (Mid-Upper Area Circumference), please in the Remarks</label>
-                             <div class="col-sm-12">
-                             </div>
-                        </div>
+                        <h6 class="mb-0">Child Registration</h6>
+                        <a href="">Show All</a>
                     </div>
+                    <form>
+                        <div class="row mb-3">
+                            <label for="inputSerial" class="col-sm-3 col-form-label" style="text-align: right;">Serial No. for Child</label>
+                            <div class="col-jm-2">
+                                <input type="number" class="form-control" id="inputSerial">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputRegNum" class="col-sm-3 col-form-label" style="text-align: right;">Registration No. for Child</label>
+                            <div class="col-jm-2">
+                                <input type="number" class="form-control" id="inputRegNum">
+                            </div>
+                        </div>
+                          <div class="row mb-3">
+                            <label for="inputHospName" class="col-sm-3 col-form-label" style="text-align: right;">Name of Health Facility</label>
+                            <div class="col-jm-2">
+                                <input type="text" class="form-control" id="inputHospName">
+                            </div>
+                        </div>
+                          <div class="row mb-3">
+                            <label for="inputDoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
+                            <div class="col-sm-2">
+                                <input type="date" class="form-control" id="inputDoFirst" style="text-align: end;">
+                            </div>
+                        </div> 
+                        <div class="row mb-3">
+                            <label for="inputBirRegNum" class="col-sm-3 col-form-label">Birth Registration No.</label>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" id="inputBirRegNum">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputChildName" class="col-sm-3 col-form-label">Child's Name</label>
+                            <div class="col-sm-2">
+                                <input type="text" class="form-control" id="inputChildName">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputDoBirth" class="col-sm-3 col-form-label">Date of Birth</label>
+                            <div class="col-sm-2">
+                                <input type="date" class="form-control" id="inputDoBirth">
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputAgeoBirth" class="col-sm-3 col-form-label">Gestational Age at Birth</label>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                  <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inputAgeoBirth">
+                                    <span class="input-group-text">weeks</span>
+                                </div>
+                           <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
+                            </div>
+                        </div> 
+                        <div class="row mb-3">
+                            <label for="inputBirWeight" class="col-sm-3 col-form-label">Birth Weight</label>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                  <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputBirWeight">
+                                    <span class="input-group-text">kg</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputBirHeight" class="col-sm-3 col-form-label">Height</label>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                  <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputBirHeight">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputHeadCirc" class="col-sm-3 col-form-label">Head Circumference</label>
+                            <div class="col-sm-2">
+                                <div class="input-group mb-3">
+                                  <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inputHeadCirc">
+                                    <span class="input-group-text">cm</span>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                  
+                  
+                        <div class="col-md-6 text-start">
+                            <h6 class="mb-0">Sex</h6>
+                      
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <label class="form-check-label" for="inlineRadio1">Male</label>
+                            </div>
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <label class="form-check-label" for="inlineRadio2">Female</label>
+                            </div>
+                        <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                                    value="option3">
+                                <label class="form-check-label" for="inlineRadio3">Unidentified</label>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelectSickleCell"
+                                aria-label="Floating label select example">
+                                <option selected>Select Status</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                            </select>
+                            <label for="floatingSelect">Sickle Cell Status</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <select class="form-select" id="floatingSelectG6pd"
+                                aria-label="Floating label select example">
+                                <option selected>Select Status</option>
+                                <option value="1">Active</option>
+                                <option value="2">Inactive</option>
+                            </select>
+                            <label for="floatingSelect">G6PD Status</label>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="inputNhisNum" class="col-sm-3 col-form-label">NHIS No.</label>
+                            <div class="col-sm-2">
+                                <input type="number" class="form-control" id="inputNhisNum">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-lg-square">Cancel</button>
+                            
+                        <button type="submit" class="btn btn-primary">Save</button>
+                    </form>
                 </div>
-
             </div>
-            <!-- Growth Param End -->
+            <!-- Child Registration End -->
 
-
-            <!-- Sales Chart Start -->
-    <!--        <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Worldwide Sales</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Salse & Revenue</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    -->
-            <!-- Sales Chart End -->
 
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
