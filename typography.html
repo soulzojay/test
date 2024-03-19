@@ -45,7 +45,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="User.html" class="navbar-brand mx-4 mb-3">
                     <h5 class="text-primary">Infant M-Portal</h5>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -146,118 +146,118 @@
                     <div class="bg-light text-center rounded p-4">
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <h6 class="mb-0">Infant Profile</h6>
-                    </div>
-                            <form>
+                        </div>
+                        <form>
+                            <div class="row mb-3">
+                                <label for="inputSerial" class="col-sm-3 col-form-label" id="outputSerial">Serial No. for Child</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" value="Ser00001" style="text-align: end;" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputRegNum" class="col-sm-3 col-form-label">Registration No.</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputRegNum" value="Reg00001" style="text-align: end;" disabled>
+                                </div>
+                            </div>
                                 <div class="row mb-3">
-                                    <label for="inputSerial" class="col-sm-3 col-form-label">Serial No. for Child</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputSerial" value="Ser00001" style="text-align: end;" disabled>
+                                <label for="inputHospName" class="col-sm-3 col-form-label">Name of Health Facility</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="inputHospName" value="Abetifi Presby HealthCenter" style="text-align: end;" disabled>
+                                </div>
+                            </div>
+                                <div class="row mb-3">
+                                <label for="inputDoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="inputDoFirst" value="01/12/2024" style="text-align: end;" disabled>
+                                </div>
+                            </div> 
+                            <div class="row mb-3">
+                                <label for="inputBirRegNum" class="col-sm-3 col-form-label">Birth Registration No.</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputBirRegNum" value="BReg00001" style="text-align: end;"  disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputChildName" class="col-sm-3 col-form-label">Child's Name</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control" id="inputChildName" value="Brendon Assiduasis Manakekeli karikari" style="text-align: end;" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputDoBirth" class="col-sm-3 col-form-label">Date of Birth</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="inputDoBirth" value="01/12/2024" style="text-align: end;" disabled>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputAgeoBirth" class="col-sm-3 col-form-label">Gestational Age at Birth</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inputAgeoBirth" value="01" style="text-align: end;" disabled>
+                                        <span class="input-group-text">weeks</span>
+                                    </div>
+                                <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
+                                </div>
+                            </div> 
+                            <div class="row mb-3">
+                                <label for="inputBirWeight" class="col-sm-3 col-form-label">Birth Weight</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputBirWeight" style="text-align: end;" value="24" disabled>
+                                        <span class="input-group-text">kg</span>
                                     </div>
                                 </div>
-                                <div class="row mb-3">
-                                    <label for="inputRegNum" class="col-sm-3 col-form-label">Registration No.</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputRegNum" value="Reg00001" style="text-align: end;" disabled>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputBirHeight" class="col-sm-3 col-form-label">Height</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputBirHeight" style="text-align: end;" value="23" disabled>
+                                        <span class="input-group-text">cm</span>
                                     </div>
                                 </div>
-                                  <div class="row mb-3">
-                                    <label for="inputHospName" class="col-sm-3 col-form-label">Name of Health Facility</label>
-                                    <div class="col-sm-4">
-                                        <input type="text" class="form-control" id="inputHospName" value="Abetifi Presby HealthCenter" style="text-align: end;" disabled>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputHeadCirc" class="col-sm-3 col-form-label">Head Circumference</label>
+                                <div class="col-sm-2">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inputHeadCirc" style="text-align: end;" value="23" disabled>
+                                        <span class="input-group-text">cm</span>
                                     </div>
                                 </div>
-                                  <div class="row mb-3">
-                                    <label for="inputDoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
+                            </div>
+                            <hr>
+                            <div class="row mb-3">
+                                        <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sex</label>
                                     <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputDoFirst" value="01/12/2024" style="text-align: end;" disabled>
-                                    </div>
-                                </div> 
-                                <div class="row mb-3">
-                                    <label for="inputBirRegNum" class="col-sm-3 col-form-label">Birth Registration No.</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputBirRegNum" value="BReg00001" style="text-align: end;"  disabled>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputChildName" class="col-sm-3 col-form-label">Child's Name</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputChildName" value="Brendon Assiduasis Manakekeli karikari" style="text-align: end;" disabled>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputDoBirth" class="col-sm-3 col-form-label">Date of Birth</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputDoBirth" value="01/12/2024" style="text-align: end;" disabled>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputAgeoBirth" class="col-sm-3 col-form-label">Gestational Age at Birth</label>
-                                    <div class="col-sm-2">
-                                        <div class="input-group mb-3">
-                                          <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inputAgeoBirth" value="01" style="text-align: end;" disabled>
-                                            <span class="input-group-text">weeks</span>
-                                        </div>
-                                   <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
-                                    </div>
-                                </div> 
-                                <div class="row mb-3">
-                                    <label for="inputBirWeight" class="col-sm-3 col-form-label">Birth Weight</label>
-                                    <div class="col-sm-2">
-                                        <div class="input-group mb-3">
-                                          <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputBirWeight" style="text-align: end;" value="24" disabled>
-                                            <span class="input-group-text">kg</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputBirHeight" class="col-sm-3 col-form-label">Height</label>
-                                    <div class="col-sm-2">
-                                        <div class="input-group mb-3">
-                                          <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputBirHeight" style="text-align: end;" value="23" disabled>
-                                            <span class="input-group-text">cm</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
-                                    <label for="inputHeadCirc" class="col-sm-3 col-form-label">Head Circumference</label>
-                                    <div class="col-sm-2">
-                                        <div class="input-group mb-3">
-                                          <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inputHeadCirc" style="text-align: end;" value="23" disabled>
-                                            <span class="input-group-text">cm</span>
-                                        </div>
+                                        <input type="text" class="form-control" id="inputSexRadio" value="Male" style="text-align: end;" disabled>
                                     </div>
                                 </div>
                                 <hr>
                                 <div class="row mb-3">
-                                         <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sex</label>
-                                        <div class="col-sm-2">
-                                            <input type="text" class="form-control" id="inputSexRadio" value="Male" style="text-align: end;" disabled>
-                                        </div>
+                                        <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sickle Cell Status</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="floatingSelectSickleCell" value="Inactive" style="text-align: end;" disabled>
                                     </div>
-                                    <hr>
-                                    <div class="row mb-3">
-                                         <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sickle Cell Status</label>
-                                        <div class="col-sm-2">
-                                            <input type="text" class="form-control" id="floatingSelectSickleCell" value="Inactive" style="text-align: end;" disabled>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                        <label for="floatingSelectG6pd" class="col-sm-3 col-form-label">G6PD Status</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="floatingSelectG6pd" value="Inactive" style="text-align: end;" disabled>
                                     </div>
-                                    <div class="row mb-3">
-                                         <label for="floatingSelectG6pd" class="col-sm-3 col-form-label">G6PD Status</label>
-                                        <div class="col-sm-2">
-                                            <input type="text" class="form-control" id="floatingSelectG6pd" value="Inactive" style="text-align: end;" disabled>
-                                        </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputNhisNum" class="col-sm-3 col-form-label">NHIS No.</label>
+                                    <div class="col-sm-2">
+                                        <input type="text" class="form-control" id="inputNhisNum" value="NHIS00001" style="text-align: end;" disabled>
                                     </div>
-                                    <div class="row mb-3">
-                                        <label for="inputNhisNum" class="col-sm-3 col-form-label">NHIS No.</label>
-                                        <div class="col-sm-2">
-                                            <input type="text" class="form-control" id="inputNhisNum" value="NHIS00001" style="text-align: end;" disabled>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <div class="col-sm-6">
-                                        <button type="submit" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Edit</button>
-                                        <button type="submit" class="btn btn-primary">Close</button>
-                                    </div>
+                                </div>
+                                <hr>
+                                <div class="col-sm-6">
+                                    <button type="submit" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Edit</button>
+                                    <button type="submit" class="btn btn-primary">Close</button>
+                                </div>
                             </form>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    <script src="js/index.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 

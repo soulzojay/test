@@ -45,7 +45,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="User.html" class="navbar-brand mx-4 mb-3">
                     <h5 class="text-primary">Infant M-Portal</h5>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -59,29 +59,21 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="registration.html" class="nav-item nav-link active"><i class="fa fa-th me-2"></i>Registration</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="registration.html" class="dropdown-item">Registration</a>
-                            <a href="typography.html" class="dropdown-item">Infant Profile</a>
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="growthparam.html" class="dropdown-item">Growth Param</a>
+                            <hr class="dropdown-divider">
+                            <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
+                            <hr class="dropdown-divider">
+                            <a href="immunization.html" class="dropdown-item">Vacc & Immun</a>
+                            <hr class="dropdown-divider">
                         </div>
                     </div>
-                    <a href="growthparam.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Growth Param</a>
-                    <a href="nutrition.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Nutri Counsel</a>
-                    <a href="immunization.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Vacc & Immun</a>
-<!--                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
-                    </div>
--->                </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -150,51 +142,51 @@
                     <form>
                         <div class="row mb-3">
                             <label for="inputSerial" class="col-sm-3 col-form-label" style="text-align: right;">Serial No. for Child</label>
-                            <div class="col-sm-2">
-                                <input type="number" class="form-control" id="inputSerial">
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="inSerial">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputRegNum" class="col-sm-3 col-form-label" style="text-align: right;">Registration No. for Child</label>
-                            <div class="col-sm-2">
-                                <input type="number" class="form-control" id="inputRegNum">
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="inRegNum">
                             </div>
                         </div>
                           <div class="row mb-3">
                             <label for="inputHospName" class="col-sm-3 col-form-label" style="text-align: right;">Name of Health Facility</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="inputHospName">
+                            <div class="col-sm-4">
+                                <input type="text" class="form-control" id="inHospName">
                             </div>
                         </div>
                           <div class="row mb-3">
-                            <label for="inputDoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
+                            <label for="inDputoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
                             <div class="col-sm-2">
-                                <input type="date" class="form-control" id="inputDoFirst" style="text-align: end;">
+                                <input type="date" class="form-control" id="inDoFirst" style="text-align: end;">
                             </div>
                         </div> 
                         <div class="row mb-3">
                             <label for="inputBirRegNum" class="col-sm-3 col-form-label">Birth Registration No.</label>
-                            <div class="col-sm-2">
-                                <input type="number" class="form-control" id="inputBirRegNum">
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control" id="inBirRegNum">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputChildName" class="col-sm-3 col-form-label">Child's Name</label>
-                            <div class="col-sm-2">
-                                <input type="text" class="form-control" id="inputChildName">
+                            <div class="col-sm-3">
+                                <input type="text" class="form-control" id="inChildName">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputDoBirth" class="col-sm-3 col-form-label">Date of Birth</label>
                             <div class="col-sm-2">
-                                <input type="date" class="form-control" id="inputDoBirth">
+                                <input type="date" class="form-control" id="inDoBirth">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <label for="inputAgeoBirth" class="col-sm-3 col-form-label">Gestational Age at Birth</label>
                             <div class="col-sm-2">
                                 <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inputAgeoBirth">
+                                  <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inAgeoBirth">
                                     <span class="input-group-text">weeks</span>
                                 </div>
                            <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
@@ -204,7 +196,7 @@
                             <label for="inputBirWeight" class="col-sm-3 col-form-label">Birth Weight</label>
                             <div class="col-sm-2">
                                 <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputBirWeight">
+                                  <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inBirWeight">
                                     <span class="input-group-text">kg</span>
                                 </div>
                             </div>
@@ -213,7 +205,7 @@
                             <label for="inputBirHeight" class="col-sm-3 col-form-label">Height</label>
                             <div class="col-sm-2">
                                 <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputBirHeight">
+                                  <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inBirHeight">
                                     <span class="input-group-text">cm</span>
                                 </div>
                             </div>
@@ -222,17 +214,14 @@
                             <label for="inputHeadCirc" class="col-sm-3 col-form-label">Head Circumference</label>
                             <div class="col-sm-2">
                                 <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inputHeadCirc">
+                                  <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inHeadCirc">
                                     <span class="input-group-text">cm</span>
                                 </div>
                             </div>
                         </div>
                         <hr>
-                  
-                  
                         <div class="col-md-6 text-start">
-                            <h6 class="mb-0">Sex</h6>
-                      
+                            <h6 class="row mb-3">Sex</h6>
                         <div class="form-check form-check-inline">
                                 <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
                                     value="option1">
@@ -278,15 +267,15 @@
                         <div class="row mb-3">
                             <label for="inputNhisNum" class="col-sm-2 col-form-label">NHIS No.</label>
                             <div class="col-sm-3">
-                                <input type="number" class="form-control" id="inputNhisNum">
+                                <input type="number" class="form-control" id="inNhisNum">
                             </div>
                         </div>
                         <hr>
                         <div class="col-sm-6">
-                            <button type="submit" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Cancel</button>
-                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="submit" id="cancelBtn" onclick="" value="typography.html" class="btn btn-primary">Cancel</button>
+                            <button type="submit" id="saveBtn" href="typography.html" class="btn btn-primary">Save</button>
+                            <a class="btn btn-primary" href="typography.html">Add</a>
                         </div>
-
                     </form>
                 </div>
             </div>
@@ -303,8 +292,6 @@
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </div>
                     </div>
                 </div>
@@ -328,7 +315,7 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-
+    <script src="js/index.js"></script>
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>

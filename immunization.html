@@ -40,13 +40,11 @@
             </div>
         </div>
         <!-- Spinner End -->
-
-
  
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="User.html" class="navbar-brand mx-4 mb-3">
                     <h5 class="text-primary">Infant M-Portal</h5>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -60,29 +58,18 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="registration.html" class="dropdown-item">Registration</a>
-                            <a href="typography.html" class="dropdown-item">Infant Profile</a>
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="growthparam.html" class="dropdown-item">Growth Param</a>
+                            <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
+                            <a href="immunization.html" class="dropdown-item active">Vacc & Immun</a>
                         </div>
                     </div>
-                    <a href="growthparam.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Growth Param</a>
-                    <a href="nutrition.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Nutri Counsel</a>
-                    <a href="immunization.html" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Vacc & Immun</a>
-        <!--        <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
-                        </div>
-                    </div>
-        -->    </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -149,7 +136,7 @@
                     <h6 class="mb-4">Immunization</h6>
                     <form>
                         <div class="mb-3">
-                            <label for="choiceAgeVaccine" class="form-label">Age</label>
+                            <label for="choiceAgeImmunize" class="form-label">Age</label>
                             <select class="col-sm-6 col-xl-3 form-select-sm mb-3" aria-label=".form-select-sm example">
                                 <option selected>Open this select menu</option>
                                 <option value="1">At Birth</option>
@@ -165,7 +152,12 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Vaccine</p>
-                                        <input type="Text" class="form-control" id="exampleInputPassword1" placeholder="BCG" disabled>
+                                         <select class="col-sm-6 col-xl-3 form-select mb-3" aria-label=".form-select-sm example">
+                                            <option value="1">BCG</option>
+                                            <option value="2">OPV 0</option>
+                                            <option value="3">Hepatitis B</option>
+                                        </select>
+                                        <!--<input type="Text" class="form-control" id="exampleInputPassword1" placeholder="BCG" disabled>-->
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +165,7 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Date given</p>
-                                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="BCG">
+                                        <input type="date" class="form-control" id="dateVacc">
                                     </div>
                                 </div>
                             </div>
@@ -182,9 +174,10 @@
                                     <div class="ms-3">
                                         <p class="mb-2">Batch number</p>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text">V:</span>                                                <input type="text" class="form-control" placeholder="00B06545" aria-label="Username">
+                                            <span class="input-group-text">V:</span>
+                                            <input type="text" id="inVBatch" class="form-control" placeholder="00B06545" aria-label="Username">
                                             <span class="input-group-text">D:</span>
-                                            <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+                                            <input type="text" id="inDBatch" class="form-control" placeholder="Server" aria-label="Server">
                                         </div>
                                     </div>
                                 </div>
@@ -195,7 +188,7 @@
                                         <div class="ms-3">
                                             <p class="mb-2">Place Given</p>
                                             <div class="row-col-xl-61">
-                                                <input type="text" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
+                                                <input type="text" id="inVaccFacility" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
                                             </div>
                                         </div>
                                     </div>
@@ -205,18 +198,18 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Next Visit</p>
-                                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="BCG">
+                                        <input type="date" class="form-control" id="dateVaccNextVis" placeholder="BCG">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="choiceAgeVaccine" class="form-label">Name and Signature:</label>
+                            <label for="User Details" class="form-label">Name and Signature:</label>
                             <div class="col-sm-6 col-jm-2">
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nurse Profile">
+                                <input type="text" class="form-control" id="inVaccUserDet" placeholder="Nurse Profile">
                             </div>
                             <div class="col-sm-6 col-sm-2">
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" id="vaccBtn" class="btn btn-primary">Add</button>
                             </div>
                         </div>
                     </form>
@@ -239,7 +232,7 @@
                     <form>
                         <div class="row g-4">
                             <div class="mb-3">
-                                <label for="choiceAgeVaccine" class="form-label">Age</label>
+                                <label for="choiceAgeVitA" class="form-label">Age</label>
                                 <select class="col-sm-6 col-xl-3 form-select-sm mb-3" aria-label=".form-select-sm example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">6 Months</option>
@@ -260,7 +253,7 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Date given</p>
-                                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="BCG">
+                                        <input type="date" class="form-control" id="dateVitA" placeholder="BCG">
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +261,7 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Vitamin</p>
-                                        <input type="Text" class="form-control" id="exampleInputPassword1" placeholder="VA1" disabled>
+                                        <input type="Text" class="form-control" id="inVitA" placeholder="VA1" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -279,7 +272,7 @@
                                         <div class="ms-3">
                                             <p class="mb-2">Place Given</p>
                                             <div class="row-col-xl-61">
-                                                <input type="text" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
+                                                <input type="text" id="inVitAFacility" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
                                             </div>
                                         </div>
                                     </div>
@@ -287,12 +280,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="choiceAgeVaccine" class="form-label">Name and Signature:</label>
+                            <label for="User Details" class="form-label">Name and Signature:</label>
                             <div class="col-sm-6 col-jm-2">
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nurse Profile">
+                                <input type="text" class="form-control" id="inVitAUserDetail" placeholder="Nurse Profile">
                             </div>
                             <div class="col-sm-6 col-sm-2">
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" id="vitAAdd" class="btn btn-primary">Add</button>
                             </div>
                         </div>
                     </form>
@@ -309,7 +302,7 @@
                         <div class="row g-4">
                             
                             <div class="mb-3">
-                                <label for="choiceAgeVaccine" class="form-label">Age</label>
+                                <label for="choiceAgeDeworm" class="form-label">Age</label>
                                 <select class="col-sm-6 col-xl-3 form-select-sm mb-3" aria-label=".form-select-sm example">
                                     <option selected>Open this select menu</option>
                                     <option value="1">2 Years</option>
@@ -328,7 +321,7 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Date given</p>
-                                        <input type="date" class="form-control" id="exampleInputPassword1" placeholder="BCG">
+                                        <input type="date" class="form-control" id="dateDeworm" placeholder="BCG">
                                     </div>
                                 </div>
                             </div>
@@ -336,7 +329,7 @@
                                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                                     <div class="ms-3">
                                         <p class="mb-2">Dewormer</p>
-                                        <input type="Text" class="form-control" id="exampleInputPassword1" placeholder="VA1" disabled>
+                                        <input type="Text" class="form-control" id="inDewormer" placeholder="VA1" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +340,7 @@
                                         <div class="ms-3">
                                         <p class="mb-2">Place Given</p>
                                             <div class="row-col-xl-61">
-                                                <input type="text" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
+                                                <input type="text" id="inDewormFacility" class="form-control" placeholder="abetifi healthcentre" aria-label="Server">
                                             </div>
                                         </div>
                                     </div>
@@ -355,12 +348,12 @@
                             </div>
                         </div>
                         <div class="row mb-3">
-                            <label for="choiceAgeVaccine" class="form-label">Name and Signature:</label>
+                            <label for="User Details" class="form-label">Name and Signature:</label>
                             <div class="col-sm-6 col-jm-2">
-                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nurse Profile">
+                                <input type="text" class="form-control" id="inDewormUserDetail" placeholder="Nurse Profile">
                             </div>
                             <div class="col-sm-6 col-sm-2">
-                                <button type="submit" class="btn btn-primary">Add</button>
+                                <button type="submit" id="dewormAdd" class="btn btn-primary">Add</button>
                             </div>
                         </div>
                     </form>
@@ -369,13 +362,26 @@
             <!-- Deworming End -->
 
             <!-- Imm & Vacc End -->
+
+
+            <!-- Footer Start -->
+            <div class="container-fluid pt-4 px-4">
+                <div class="bg-light rounded-top p-4">
+                    <div class="row">
+                        <div class="col-12 col-sm-6 text-center text-sm-start">
+                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                        </div>
+                        <div class="col-12 col-sm-6 text-center text-sm-end">
+                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+
         </div>
         <!-- Content End -->
-
-
-        <!-- Footer Start -->
-        
-        <!-- Footer End -->
     
 
 

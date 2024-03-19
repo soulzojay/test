@@ -44,7 +44,7 @@
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
-                <a href="index.html" class="navbar-brand mx-4 mb-3">
+                <a href="User.html" class="navbar-brand mx-4 mb-3">
                     <h5 class="text-primary">Infant M-Portal</h5>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
@@ -58,31 +58,19 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="registration.html" class="dropdown-item">Registration</a>
-                            <a href="typography.html" class="dropdown-item">Infant Profile</a>
-        <!--                <a href="element.html" class="dropdown-item">Other Elements</a>
-        -->                </div>
-                    </div>
-                    <a href="growthparam.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Growth Param</a>
-                    <a href="nutrition.html" class="nav-item nav-link active"><i class="fa fa-keyboard me-2"></i>Nutri Counsel</a>
-                    <a href="immunization.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Vacc & Immun</a>
-        <!--            <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
-                    <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
-                    <div class="dropdown-menu bg-transparent border-0">
-                        <a href="signin.html" class="dropdown-item">Sign In</a>
-                        <a href="signup.html" class="dropdown-item">Sign Up</a>
-                        <a href="404.html" class="dropdown-item">404 Error</a>
-                        <a href="blank.html" class="dropdown-item">Blank Page</a>
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="growthparam.html" class="dropdown-item">Growth Param</a>
+                            <a href="nutrition.html" class="dropdown-item active">Nutri Counsel</a>
+                            <a href="immunization.html" class="dropdown-item">Vacc & Immun</a>
+                        </div>
                     </div>
                 </div>
-        -->    </div>
-        </nav>
+            </nav>
         </div>
        <!-- Sidebar End -->
        
@@ -152,14 +140,14 @@
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-left justify-content-between mb-4">
-                        <h6 class="col-sm- mb-0">Nutrition Counseling</h6>
+                        <h5 class="col-sm- mb-0">Nutrition Counseling</h5>
                         <div class="col-row mb-3">
-                            <input type="date" class="form-control" id="inputSerial">
+                            <input type="date" class="form-control" id="NutriDate">
                         </div>
                         
                     </div>
                     <div class="d-flex align-items-left justify-content-between mb-2">
-                        <h6 class="col-sm-3 mb-0">Assessment of Growth</h6>
+                        <h6 class="col-sm-3 mb-0" style="text-align: center;">Assessment of Growth</h6>
                     </div>
 
                     <div class="container-fluid pt-4 px-4">
@@ -169,10 +157,10 @@
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="ms-3">
                                         <div class="row mb-3">
-                                            <label for="inputBirWeight" class="mb-2">Birth Weight</label>
+                                            <label for="inputBirWeight" class="mb-2" style="text-align: left;">Weight</label>
                                             <div class="sm-3">
                                                 <div class="input-group mb-3">
-                                                    <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputBirWeight">
+                                                    <input type="number" class="form-control" aria-label="Weight (Weight in kg)" id="inWeight">
                                                     <span class="input-group-text">kg</span>
                                                 </div>
                                             </div>
@@ -183,10 +171,10 @@
                             <div class="col-sm-6 col-xl-3">
                                 <div class="d-flex align-items-center justify-content-between mb-4">
                                     <div class="ms-3">
-                                        <label for="inputBirHeight" class="mb-2">Height</label>
                                         <div class="row mb-3">
+                                            <label for="inputBirHeight" class="mb-2" style="text-align: left;">Height</label>
                                             <div class="input-group mb-3">
-                                                <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputBirHeight">
+                                                <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inBirHeight">
                                                 <span class="input-group-text">cm</span>
                                             </div>
                                         </div>
@@ -197,9 +185,9 @@
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">Interpretation of Chart or Curve</label>
+                                    <label for="Interpretation of Chart" class="form-label" style="text-align: left;">Interpretation of Chart or Curve</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="interpretation according to graph">
+                                        <input type="text" class="form-control-lg" id="inInChart" placeholder="interpretation according to graph">
                                     </div>
                                 </div>
                             </div>
@@ -207,9 +195,9 @@
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">Recent History of Illness</label>
+                                    <label for="Recent History" class="form-label" style="text-align: left;">Recent History of Illness</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="Recent History of Illness">
+                                        <input type="text" class="form-control-lg" id="inRecHistoIll" placeholder="Recent History of Illness">
                                     </div>
                                 </div>
                             </div>
@@ -217,9 +205,9 @@
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">Recent History of Feeding</label>
+                                    <label for="Recent History of Feeding" class="form-label" style="text-align: left;">Recent History of Feeding</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="Recent History of Feeding">
+                                        <input type="text" class="form-control-lg" id="inRecHistoFeed" placeholder="Recent History of Feeding">
                                     </div>
                                 </div>
                             </div>
@@ -228,14 +216,14 @@
                         <hr>
 
                         <div class="d-flex align-items-left justify-content-between mb-2">
-                            <h6 class="col-sm-3 mb-0">Analysis</h6>
+                            <h6 class="col-sm-3 mb-0" style="text-align: left;">Analysis</h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">List Identified Gaps in Feeding and Care</label>
+                                    <label for="Identified Gaps in Feeding and Care" class="form-label" style="text-align: left;">List Identified Gaps in Feeding and Care</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="List Identified Gaps in Feeding and Care">
+                                        <input type="text" class="form-control-lg" id="inGapsFeed" placeholder="List Identified Gaps in Feeding and Care">
                                     </div>
                                 </div>
                             </div>
@@ -244,36 +232,37 @@
                         <hr>
 
                         <div class="d-flex align-items-left justify-content-between mb-2">
-                            <h6 class="col-sm-3 mb-0">Action</h6>
+                            <h6 class="col-sm-3 mb-0" style="text-align: left;">Action</h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">Recommended Actions</label>
+                                    <label for="Recommended Actions" class="form-label" style="text-align: left;">Recommended Actions</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="Recommended Actions">
+                                        <input type="text" class="form-control-lg" id="inAction" placeholder="Recommended Actions">
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
                         <hr>
-
                         <div class="d-flex align-items-left justify-content-between mb-2">
-                            <h6 class="col-sm-3 mb-0">Remarks</h6>
+                            <h6 class="col-sm-3 mb-0" style="text-align: left;">Remarks</h6>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
                             <div class="ms-3">
                                 <div class="row mb-3">
-                                    <label for="choiceAgeVaccine" class="form-label" style="text-align: left;">Additional notes on Assessment, Analysis and Actions</label>
+                                    <label for="Additional notes on Assessment, Analysis and Actions" class="form-label" style="text-align: left;">Additional notes on Assessment, Analysis and Actions</label>
                                     <div class="row mb-3 col-jm-2">
-                                        <input type="text" class="form-control-lg" id="exampleInputPassword1" placeholder="Additional notes on Assessment, Analysis and Actions">
+                                        <input type="text" class="form-control-lg" id="inNutriRemark" placeholder="Additional notes on Assessment, Analysis and Actions">
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        
+                        <hr>
+                        <div class="col-sm-6">
+                            <button type="submit" id="nutricancelBtn" class="btn btn-primary">Cancel</button>
+                            <button type="submit" id="nutriaddBtn" class="btn btn-primary">Add</button>
+                        </div>
                     </div>
                         <!--           </div>
                        </div>
@@ -292,8 +281,8 @@
                         <form>
             
                         </form>
-                     </div>
-   -->             </div>
+                     </div>--> 
+                </div>
             </div>
             <!-- Blank End -->
 
