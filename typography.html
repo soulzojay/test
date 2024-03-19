@@ -60,28 +60,29 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <!--<a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>-->
+                    
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Records</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Registration</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="registration.html" class="dropdown-item">Registration</a>
-                            <a href="typography.html" class="dropdown-item">Infant Profile</a>
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="registration.html" class="dropdown-item">New Registration</a>
+                            <a href="search.html" class="dropdown-item">Continue Registration</a>
                         </div>
                     </div>
-                    <a href="growthparam.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Growth Param</a>
-                    <a href="nutrition.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Nutri Counsel</a>
-                    <a href="immunization.html" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Vacc & Immun</a>
-<!--                    <a href="table.html" class="nav-item nav-link"><i class="fa fa-table me-2"></i>Tables</a>
-                    <a href="chart.html" class="nav-item nav-link"><i class="fa fa-chart-bar me-2"></i>Charts</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Pages</a>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="signin.html" class="dropdown-item">Sign In</a>
-                            <a href="signup.html" class="dropdown-item">Sign Up</a>
-                            <a href="404.html" class="dropdown-item">404 Error</a>
-                            <a href="blank.html" class="dropdown-item">Blank Page</a>
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="growthparam.html" class="dropdown-item">Growth Param</a>
+                            <hr class="dropdown-divider">
+                            <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
+                            <hr class="dropdown-divider">
+                            <a href="immunization.html" class="dropdown-item">Vacc & Immun</a>
+                            <hr class="dropdown-divider">
                         </div>
                     </div>
--->             </div>
+                </div>
             </nav>
         </div>
         <!-- Sidebar End -->
@@ -233,32 +234,34 @@
                                     <div class="col-sm-2">
                                         <input type="text" class="form-control" id="inputSexRadio" value="Male" style="text-align: end;" disabled>
                                     </div>
+                            </div>
+                            <hr>
+                            <div class="row mb-3">
+                                    <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sickle Cell Status</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="floatingSelectSickleCell" value="Inactive" style="text-align: end;" disabled>
                                 </div>
-                                <hr>
-                                <div class="row mb-3">
-                                        <label for="floatingSelectSickleCell" class="col-sm-3 col-form-label">Sickle Cell Status</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="floatingSelectSickleCell" value="Inactive" style="text-align: end;" disabled>
-                                    </div>
+                            </div>
+                            <div class="row mb-3">
+                                    <label for="floatingSelectG6pd" class="col-sm-3 col-form-label">G6PD Status</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="floatingSelectG6pd" value="Inactive" style="text-align: end;" disabled>
                                 </div>
-                                <div class="row mb-3">
-                                        <label for="floatingSelectG6pd" class="col-sm-3 col-form-label">G6PD Status</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="floatingSelectG6pd" value="Inactive" style="text-align: end;" disabled>
-                                    </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputNhisNum" class="col-sm-3 col-form-label">NHIS No.</label>
+                                <div class="col-sm-2">
+                                    <input type="text" class="form-control" id="inputNhisNum" value="NHIS00001" style="text-align: end;" disabled>
                                 </div>
-                                <div class="row mb-3">
-                                    <label for="inputNhisNum" class="col-sm-3 col-form-label">NHIS No.</label>
-                                    <div class="col-sm-2">
-                                        <input type="text" class="form-control" id="inputNhisNum" value="NHIS00001" style="text-align: end;" disabled>
-                                    </div>
-                                </div>
-                                <hr>
-                                <div class="col-sm-6">
-                                    <button type="submit" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Edit</button>
-                                    <button type="submit" class="btn btn-primary">Close</button>
-                                </div>
-                            </form>
+                            </div>
+                            <hr>
+                            <div class="col-sm-6">
+                                <!--<button type="submit" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Edit</button>-->
+                                <!--<button type="submit" class="btn btn-primary">Next</button>-->
+                                <a href="registration.html" class="btn btn-primary" style="background-color: rgb(255, 115, 0);">Edit</a>
+                                <a href="growthparam.html" class="btn btn-primary">Next</a>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
