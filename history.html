@@ -60,7 +60,16 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="User.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>
+                    <!--<a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>-->
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Registration</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="registration.html" class="dropdown-item">New Registration</a>
+                            <a href="search.html" class="dropdown-item">Continue Registration</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -79,7 +88,7 @@
         <div class="content">
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="User.html" class="navbar-brand d-flex d-lg-none me-4">
+                <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
                     <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
@@ -89,7 +98,7 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                     <!-- Message nav bar-->
+                     <!-- Message nav bar
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-envelope me-lg-2"></i>
@@ -129,7 +138,7 @@
                             <a href="#" class="dropdown-item text-center">See all message</a>
                         </div>
                     </div>
-                     
+                     -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
@@ -169,7 +178,8 @@
             </nav>
             <!-- Navbar End -->
 
-            <!-- Sale & Revenue Start -->
+
+            <!-- Sale & Revenue Start
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-6 col-xl-3">
@@ -210,36 +220,68 @@
                     </div>
                 </div>
             </div>
-            <!-- Sale & Revenue End -->
+            Sale & Revenue End -->
 
 
-            <!-- Sales Chart Start-->
+            <!-- Sales Chart Start
             <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
+                <div class="row g-3">
+                    <div class="col-sm-3 col-sm-3">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Worldwide Sales</h6>
-                                <a href="">Show All</a>
+                                <h6 class="mb-0">Growth Parameters</h6>
                             </div>
-                            <canvas id="worldwide-sales"></canvas>
+                            <div class="row g-2">
+                                <div class="col-sm-6 col-xl-6">
+                                        <div class="ms-3">
+                                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                            <p class="mb-2" href="registration.html">Parameters History</p>
+                                        </div>
+                                </div>
+                            </div>                                
                         </div>
                     </div>
-                    <div class="col-sm-12 col-xl-6">
+
+                    <div class="col-sm-3 col-sm-3">
                         <div class="bg-light text-center rounded p-4">
                             <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Salse & Revenue</h6>
-                                <a href="">Show All</a>
+                                <h6 class="mb-0">nutrition Counsel</h6>
                             </div>
-                            <canvas id="salse-revenue"></canvas>
+                            <div class="row g-2">
+                                <div class="col-sm-6 col-xl-6">
+                                        <div class="ms-3">
+                                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                            <p class="mb-2" href="registration.html">Plan History</p>
+                                        </div>
+                                </div>
+                            </div>                                
                         </div>
                     </div>
+
+                    <div class="col-sm-3 col-sm-3">
+                        <div class="bg-light text-center rounded p-4">
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h6 class="mb-0">Vaccine & Immuniz</h6>
+                            </div>
+                            <div class="row g-2">
+                                <div class="col-sm-6 col-xl-6">
+                                        <div class="ms-3">
+                                            <i class="fa fa-chart-line fa-3x text-primary"></i>
+                                            <p class="mb-2" href="registration.html">Plan History</p>
+                                        </div>
+                                </div>
+                            </div>                                
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-            <!--Sales Chart End -->
+            Sales Chart End -->
 
 
-            <!-- Recent Sales Start -->
+             
+            <!-- Recent visits Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
@@ -251,12 +293,11 @@
                             <thead>
                                 <tr class="text-dark">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">Date</th>
+                                    <th scope="col">Date of Visit</th>
                                     <th scope="col">Age</th>
                                     <th scope="col">Weight</th>
                                     <th scope="col">Length</th>
                                     <th scope="col">Remarks</th>
-                                    <th scope="col">Date & Time Visit</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -268,7 +309,15 @@
                                     <td>12kg</td>
                                     <td>23cm</td>
                                     <td>well fed</td>
-                                    <td>01 Mar 2045</td>
+                                    <td><a class="btn btn-sm btn-primary" href="fullHistory.html">Detail</a></td>
+                                </tr>
+                                <tr>
+                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>23 months</td>
+                                    <td>12kg</td>
+                                    <td>23cm</td>
+                                    <td>well fed</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
@@ -278,7 +327,6 @@
                                     <td>12kg</td>
                                     <td>23cm</td>
                                     <td>well fed</td>
-                                    <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
@@ -288,7 +336,6 @@
                                     <td>12kg</td>
                                     <td>23cm</td>
                                     <td>well fed</td>
-                                    <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
@@ -298,17 +345,6 @@
                                     <td>12kg</td>
                                     <td>23cm</td>
                                     <td>well fed</td>
-                                    <td>01 Mar 2045</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01 Jan 2045</td>
-                                    <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
-                                    <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                             </tbody>
@@ -316,10 +352,13 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent Sales End -->
+            <!-- Recent visits End -->
 
 
-            <!-- Widgets Start--> 
+
+
+
+            <!-- Widgets Start 
             <div class="container-fluid pt-4 px-4">
                 <div class="row g-4">
                     <div class="col-sm-12 col-md-6 col-xl-4">
@@ -399,7 +438,7 @@
                     </div>
                 </div>
             </div>
-            <!--Widgets End -->
+            Widgets End -->
 
 
             <!-- Footer Start -->
@@ -412,7 +451,7 @@
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>

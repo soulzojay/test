@@ -60,7 +60,16 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="User.html" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>
+                    <!--<a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>-->
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Registration</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                            <a href="registration.html" class="dropdown-item">New Registration</a>
+                            <a href="search.html" class="dropdown-item">Continue Registration</a>
+                        </div>
+                    </div>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
                         <div class="dropdown-menu bg-transparent border-0">
@@ -89,7 +98,7 @@
                     <input class="form-control border-0" type="search" placeholder="Search">
                 </form>
                 <div class="navbar-nav align-items-center ms-auto">
-                     <!-- Message nav bar-->
+                     <!-- Message nav bar
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-envelope me-lg-2"></i>
@@ -129,7 +138,7 @@
                             <a href="#" class="dropdown-item text-center">See all message</a>
                         </div>
                     </div>
-                     
+                     -->
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <i class="fa fa-bell me-lg-2"></i>
@@ -169,145 +178,141 @@
             </nav>
             <!-- Navbar End -->
 
-            <!-- Sale & Revenue Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-line fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today Total Visit</p>
-                                <h6 class="mb-0">1234</h6>
+
+          <!-- Recent Vaccine Start -->
+            <div class="container-fluid pt-4 py-0">
+                <div class="bg-light rounded-top p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <form>
+                            <h6 class="mb-4">Growth Parameters</h6>
+                            <div class="col-sm-6 row mb-3">
+                                <label for="inputVisitDate" class="col-sm-3 col-form-label" style="text-align: left;">Date</label>
+                                <div class="col-sm-6">
+                                    <input type="date" class="form-control" id="inputVisitDate"
+                                    disabled>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-bar fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">New Registr...</p>
-                                <h6 class="mb-0">1234</h6>
+                            <div class="col-sm-6 row mb-0">
+                                <label for="inputPresentAge" class="col-sm-3 col-form-label" style="text-align: left;">Age</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <input type="age" class="form-control" aria-label="Months ( Age in months)" id="inputPresentAge"
+                                        disabled>
+                                        <span class="input-group-text">Months</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-area fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Today vaccinat...</p>
-                                <h6 class="mb-0">94</h6>
+                            <div class="row mb-0 col-sm-6">
+                                <label for="inputNewWeight" class="col-sm-3 col-form-label" style="text-align: left;">Weight</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inputNewWeight"
+                                        disabled>
+                                        <span class="input-group-text">KG</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-xl-3">
-                        <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
-                            <i class="fa fa-chart-pie fa-3x text-primary"></i>
-                            <div class="ms-3">
-                                <p class="mb-2">Visit left</p>
-                                <h6 class="mb-0">34</h6>
+                            <div class="col-sm-6 row mb-0">
+                                <label for="inputNewHeight" class="col-sm-3 col-form-label" style="text-align: left;">Height</label>
+                                <div class="col-sm-6">
+                                    <div class="input-group mb-3">
+                                      <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inputNewHeight"
+                                      disabled>
+                                        <span class="input-group-text">CM</span>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                            <div class="row mb-2">
+                                <label for="inputRemark" class="col-sm-3 col-form-label" style="text-align: left;">Remarks</label>
+                                <textarea class="form-control" input type="text" id="floatingTextarea" style="height: 198px; width: 700px;"                   disabled></textarea>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-            <!-- Sale & Revenue End -->
+            <!-- Recent Vaccine End -->
+            
 
-
-            <!-- Sales Chart Start-->
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Worldwide Sales</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="worldwide-sales"></canvas>
-                        </div>
+            <!-- Growth Param Start -->
+            <div class="container-fluid pt-4 py-0">
+                <div class="bg-light rounded-top p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
                     </div>
-                    <div class="col-sm-12 col-xl-6">
-                        <div class="bg-light text-center rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Salse & Revenue</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <canvas id="salse-revenue"></canvas>
-                        </div>
-                    </div>
+                    <hr>
                 </div>
             </div>
-            <!--Sales Chart End -->
+            <!-- Growth Param End -->
 
 
-            <!-- Recent Sales Start -->
+  
+            <!-- Recent Vaccine Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Recent Visit</h6>
-                        <a href="">Show All</a>
+                        <h6 class="mb-0">Recent Vaccinations</h6>
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-dark">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">Date</th>
+                                    <th scope="col">Date of Visit</th>
+                                    <th scope="col">Vaccine</th>
                                     <th scope="col">Age</th>
-                                    <th scope="col">Weight</th>
-                                    <th scope="col">Length</th>
-                                    <th scope="col">Remarks</th>
-                                    <th scope="col">Date & Time Visit</th>
+                                    <th scope="col">Date Administered</th>
+                                    <th scope="col">Batch number</th>
+                                    <th scope="col">Place Given</th>
+                                    <th scope="col">Next Administration</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>BCG</td>
                                     <td>01 Jan 2045</td>
                                     <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
+                                    <td>00B06545</td>
+                                    <td>Abetifi HealthCenter</td>
                                     <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>BCG</td>
                                     <td>01 Jan 2045</td>
                                     <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
+                                    <td>00B06545</td>
+                                    <td>Abetifi HealthCenter</td>
                                     <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>BCG</td>
                                     <td>01 Jan 2045</td>
                                     <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
+                                    <td>00B06545</td>
+                                    <td>Abetifi HealthCenter</td>
                                     <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>BCG</td>
                                     <td>01 Jan 2045</td>
                                     <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
+                                    <td>00B06545</td>
+                                    <td>Abetifi HealthCenter</td>
                                     <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
+                                    <td>01 Jan 2045</td>
+                                    <td>BCG</td>
                                     <td>01 Jan 2045</td>
                                     <td>23 months</td>
-                                    <td>12kg</td>
-                                    <td>23cm</td>
-                                    <td>well fed</td>
+                                    <td>00B06545</td>
+                                    <td>Abetifi HealthCenter</td>
                                     <td>01 Mar 2045</td>
                                     <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
                                 </tr>
@@ -316,92 +321,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Recent Sales End -->
-
-
-            <!-- Widgets Start--> 
-            <div class="container-fluid pt-4 px-4">
-                <div class="row g-4">
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-2">
-                                <h6 class="mb-0">Today Visit</h6>
-                                <a href="">Show All</a>
-                            </div>
-                        
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">Calender</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div id="calender"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-xl-4">
-                        <div class="h-100 bg-light rounded p-4">
-                            <div class="d-flex align-items-center justify-content-between mb-4">
-                                <h6 class="mb-0">To Do List</h6>
-                                <a href="">Show All</a>
-                            </div>
-                            <div class="d-flex mb-2">
-                                <input class="form-control bg-transparent" type="text" placeholder="Enter task">
-                                <button type="button" class="btn btn-primary ms-2">Add</button>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox" checked>
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span><del>Short task goes here...</del></span>
-                                        <button class="btn btn-sm text-primary"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center border-bottom py-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-center pt-2">
-                                <input class="form-check-input m-0" type="checkbox">
-                                <div class="w-100 ms-3">
-                                    <div class="d-flex w-100 align-items-center justify-content-between">
-                                        <span>Short task goes here...</span>
-                                        <button class="btn btn-sm"><i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Widgets End -->
-
-
+            <!-- Recent Vaccine End -->
             <!-- Footer Start -->
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded-top p-4">
@@ -412,7 +332,7 @@
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                         </div>
+                        </div>
                     </div>
                 </div>
             </div>
