@@ -1,318 +1,481 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Infant Management System</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"/>
+
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"/>
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+    <link href="css/style.css" rel="stylesheet" />
 
-<body>
+    <!-- firebase Stylesheet -->
+    <script type="module" src="/src/index.js"></script>
+  </head>
+
+  <body>
     <div class="container-xxl position-relative bg-white d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+      <!-- Spinner Start -->
+      <div
+        id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+      >
+        <div
+          class="spinner-border text-primary"
+          style="width: 3rem; height: 3rem"
+          role="status"
+        >
+          <span class="sr-only">Loading...</span>
         </div>
-        <!-- Spinner End -->
+      </div>
+      <!-- Spinner End -->
 
-
-        <!-- Sidebar Start -->
-        <div class="sidebar pe-4 pb-3">
-            <nav class="navbar bg-light navbar-light">
-                <a href="User.html" class="navbar-brand mx-4 mb-3">
-                    <h5 class="text-primary">Infant M-Portal</h5>
-                </a>
-                <div class="d-flex align-items-center ms-4 mb-4">
-                    <div class="position-relative">
-                        <img class="rounded-circle" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                        <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
-                    </div>
-                    <div class="ms-3">
-                        <h6 class="mb-0">Nurse Doe</h6>
-                        <span>Nurse in charge</span>
-                    </div>
-                </div>
-                <div class="navbar-nav w-100">
-                    <a href="User.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <!--<a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>-->
-                    
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-th me-2"></i>Registration</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
-                            <a href="registration.html" class="dropdown-item active">New Registration</a>
-                            <a href="search.html" class="dropdown-item">Continue Registration</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-laptop me-2"></i>Care Plan</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
-                            <a href="growthparam.html" class="dropdown-item">Growth Param</a>
-                            <hr class="dropdown-divider">
-                            <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
-                            <hr class="dropdown-divider">
-                            <a href="immunization.html" class="dropdown-item">Vacc & Immun</a>
-                            <hr class="dropdown-divider">
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <!-- Sidebar End -->
-
-
-
-           <!-- Content Start -->
-           <div class="content">
-            <!-- Navbar Start -->
-            <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0">
-                <a href="User.html" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
-                </a>
-                <a href="#" class="sidebar-toggler flex-shrink-0">
-                    <i class="fa fa-bars"></i>
-                </a>
-                <form class="d-none d-md-flex ms-4">
-                    <input class="form-control border-0" type="search" placeholder="Search">
-                </form>
-                <div class="navbar-nav align-items-center ms-auto">
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <i class="fa fa-bell me-lg-2"></i>
-                            <span class="d-none d-lg-inline-flex">Notification</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Profile updated</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">New user added</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item">
-                                <h6 class="fw-normal mb-0">Password changed</h6>
-                                <small>15 minutes ago</small>
-                            </a>
-                            <hr class="dropdown-divider">
-                            <a href="#" class="dropdown-item text-center">See all notifications</a>
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <img class="rounded-circle me-lg-2" src="img/user.jpg" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">Nurse Doe</span>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="myprofile.html" class="dropdown-item">My Profile</a>
-                            <a href="settings.html" class="dropdown-item">Settings</a>
-                            <a href="signin.html" class="dropdown-item">Log Out</a>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- Navbar End -->
-
-            <!-- Child Registration Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light text-center rounded p-4">
-                    <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Child Registration</h6>
-                    </div>
-                    <form>
-                        <div class="row mb-3">
-                            <label for="inputSerial" class="col-sm-3 col-form-label" style="text-align: right;">Serial No. for Child</label>
-                            <div class="col-sm-3">
-                                <input type="number" class="form-control" id="inSerial">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputRegNum" class="col-sm-3 col-form-label" style="text-align: right;">Registration No. for Child</label>
-                            <div class="col-sm-3">
-                                <input type="number" class="form-control" id="inRegNum">
-                            </div>
-                        </div>
-                          <div class="row mb-3">
-                            <label for="inputHospName" class="col-sm-3 col-form-label" style="text-align: right;">Name of Health Facility</label>
-                            <div class="col-sm-4">
-                                <input type="text" class="form-control" id="inHospName">
-                            </div>
-                        </div>
-                          <div class="row mb-3">
-                            <label for="inDputoFirst" class="col-sm-3 col-form-label">Date of First Seen</label>
-                            <div class="col-sm-2">
-                                <input type="date" class="form-control" id="inDoFirst" style="text-align: end;">
-                            </div>
-                        </div> 
-                        <div class="row mb-3">
-                            <label for="inputBirRegNum" class="col-sm-3 col-form-label">Birth Registration No.</label>
-                            <div class="col-sm-3">
-                                <input type="number" class="form-control" id="inBirRegNum">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputChildName" class="col-sm-3 col-form-label">Child's Name</label>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control" id="inChildName">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputDoBirth" class="col-sm-3 col-form-label">Date of Birth</label>
-                            <div class="col-sm-2">
-                                <input type="date" class="form-control" id="inDoBirth">
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputAgeoBirth" class="col-sm-3 col-form-label">Gestational Age at Birth</label>
-                            <div class="col-sm-2">
-                                <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Age ( Age at Birth in weeks)" id="inAgeoBirth">
-                                    <span class="input-group-text">weeks</span>
-                                </div>
-                           <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
-                            </div>
-                        </div> 
-                        <div class="row mb-3">
-                            <label for="inputBirWeight" class="col-sm-3 col-form-label">Birth Weight</label>
-                            <div class="col-sm-2">
-                                <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Weight ( Weight at Birth in kg)" id="inBirWeight">
-                                    <span class="input-group-text">kg</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputBirHeight" class="col-sm-3 col-form-label">Height</label>
-                            <div class="col-sm-2">
-                                <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Height ( Height at Birth in cm)" id="inBirHeight">
-                                    <span class="input-group-text">cm</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mb-3">
-                            <label for="inputHeadCirc" class="col-sm-3 col-form-label">Head Circumference</label>
-                            <div class="col-sm-2">
-                                <div class="input-group mb-3">
-                                  <input type="number" class="form-control" aria-label="Length ( Head Length at Birth in cm)" id="inHeadCirc">
-                                    <span class="input-group-text">cm</span>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-md-6 text-start">
-                            <h6 class="row mb-3">Sex</h6>
-                        <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                                    value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Male</label>
-                            </div>
-                        <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                                    value="option2">
-                                <label class="form-check-label" for="inlineRadio2">Female</label>
-                            </div>
-                        <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                                    value="option3">
-                                <label class="form-check-label" for="inlineRadio3">Unidentified</label>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row g-2">
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="form-floating mb-3">
-                                    <select class="form-select" id="floatingSelectSickleCell"
-                                        aria-label="Floating label select example" style="width: 200px">
-                                        <option selected>Select Status</option>
-                                        <option value="1">Active</option>
-                                        <option value="2">Inactive</option>
-                                    </select>
-                                    <label for="floatingSelect">Sickle Cell Status</label>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 col-xl-3">
-                                <div class="form-floating mb-3">
-                                    <select class="form-select" id="floatingSelectG6pd"
-                                        aria-label="Floating label select example" style="width: 200px">
-                                        <option selected>Select Status</option>
-                                        <option value="1">Active</option>
-                                        <option value="2">Inactive</option>
-                                    </select>
-                                    <label for="floatingSelect">G6PD Status</label>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row mb-3">
-                            <label for="inputNhisNum" class="col-sm-2 col-form-label">NHIS No.</label>
-                            <div class="col-sm-3">
-                                <input type="number" class="form-control" id="inNhisNum">
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="col-sm-6">
-                            <!--<button type="submit" id="cancelBtn" onclick="" value="typography.html" class="btn btn-primary">Cancel</button>-->
-                            <!--<button type="submit" id="saveBtn" href="typography.html" class="btn btn-primary">Save</button>-->
-                            <a class="btn btn-primary" href="#">Cancel</a>
-                            <a class="btn btn-primary" href="typography.html">Add</a>
-                        </div>
-                    </form>
-                </div>
+      <!-- Sidebar Start -->
+      <div class="sidebar pe-4 pb-3">
+        <nav class="navbar bg-light navbar-light">
+          <a href="index.html" class="navbar-brand mx-4 mb-3">
+            <h5 class="text-primary">Infant M-Portal</h5>
+          </a>
+          <div class="d-flex align-items-center ms-4 mb-4">
+            <div class="position-relative">
+              <img
+                class="rounded-circle"
+                src="img/user.jpg"
+                alt=""
+                style="width: 40px; height: 40px"
+              />
+              <div
+                class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"
+              ></div>
             </div>
-            <!-- Child Registration End -->
-
-
-            <!-- Footer Start -->
-            <div class="container-fluid pt-4 px-4">
-                <div class="bg-light rounded-top p-4">
-                    <div class="row">
-                        <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
-                        </div>
-                        <div class="col-12 col-sm-6 text-center text-sm-end">
-                            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="ms-3">
+              <h6 class="mb-0">Nurse Doe</h6>
+              <span>Nurse in charge</span>
             </div>
-            <!-- Footer End -->
+          </div>
+          <div class="navbar-nav w-100">
+            <a href="index.html" class="nav-item nav-link"
+              ><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a
+            >
+            <!--<a href="registration.html" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Registration</a>-->
+
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                ><i class="fa fa-th me-2"></i>Registration</a
+              >
+              <div class="dropdown-menu bg-transparent border-0">
+                <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                <a href="registration.html" class="dropdown-item active"
+                  >New Registration</a
+                >
+                <a href="search.html" class="dropdown-item"
+                  >Continue Registration</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                ><i class="fa fa-laptop me-2"></i>Care Plan</a
+              >
+              <div class="dropdown-menu bg-transparent border-0">
+                <!--<a href="typography.html" class="dropdown-item">Infant Profile</a>-->
+                <a href="growthparam.html" class="dropdown-item"
+                  >Growth Param</a
+                >
+                <hr class="dropdown-divider" />
+                <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
+                <hr class="dropdown-divider" />
+                <a href="immunization.html" class="dropdown-item"
+                  >Vacc & Immun</a
+                >
+                <hr class="dropdown-divider" />
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Sidebar End -->
+
+      <!-- Content Start -->
+      <div class="content">
+        <!-- Navbar Start -->
+        <nav
+          class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"
+        >
+          <a href="index.html" class="navbar-brand d-flex d-lg-none me-4">
+            <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+          </a>
+          <a href="#" class="sidebar-toggler flex-shrink-0">
+            <i class="fa fa-bars"></i>
+          </a>
+          <form class="d-none d-md-flex ms-4">
+            <input
+              class="form-control border-0"
+              type="search"
+              placeholder="Search"
+            />
+          </form>
+          <div class="navbar-nav align-items-center ms-auto">
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <i class="fa fa-bell me-lg-2"></i>
+                <span class="d-none d-lg-inline-flex">Notification</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">Profile updated</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">New user added</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item">
+                  <h6 class="fw-normal mb-0">Password changed</h6>
+                  <small>15 minutes ago</small>
+                </a>
+                <hr class="dropdown-divider" />
+                <a href="#" class="dropdown-item text-center"
+                  >See all notifications</a
+                >
+              </div>
+            </div>
+            <div class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+              >
+                <img
+                  class="rounded-circle me-lg-2"
+                  src="img/user.jpg"
+                  alt=""
+                  style="width: 40px; height: 40px"
+                />
+                <span class="d-none d-lg-inline-flex">Nurse Doe</span>
+              </a>
+              <div
+                class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0"
+              >
+                <a href="myprofile.html" class="dropdown-item">My Profile</a>
+                <a href="settings.html" class="dropdown-item">Settings</a>
+                <a href="signin.html" class="dropdown-item">Log Out</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!-- Navbar End -->
+
+        <!-- Child Registration Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="bg-light text-center rounded p-4">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h6 class="mb-0">Child Registration</h6>
+            </div>
+            <form>
+              <div class="row mb-3">
+                <label
+                  for="inputSerial"
+                  class="col-sm-3 col-form-label"
+                  style="text-align: right"
+                  >Serial No. for Child</label
+                >
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inSerial"
+                    placeholder="Serial No."
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="inputRegNum"
+                  class="col-sm-3 col-form-label"
+                  style="text-align: right"
+                  >Registration No. for Child</label
+                >
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inRegNum"
+                    placeholder="Registration No."
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label
+                  for="inputHospName"
+                  class="col-sm-3 col-form-label"
+                  style="text-align: right"
+                  >Name of Health Facility</label
+                >
+                <div class="col-sm-4">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inHospName"
+                    placeholder="Health Facility"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inDputoFirst" class="col-sm-3 col-form-label"
+                  >Date of First Seen</label
+                >
+                <div class="col-sm-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inDoFirst"
+                    style="text-align: end"
+                  />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputBirRegNum" class="col-sm-3 col-form-label"
+                  >Birth Registration No.</label
+                >
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inBirRegNum" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputChildName" class="col-sm-3 col-form-label"
+                  >Child's Name</label
+                >
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inChildName" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputDoBirth" class="col-sm-3 col-form-label"
+                  >Date of Birth</label
+                >
+                <div class="col-sm-3">
+                  <input type="date" class="form-control" id="inDoBirth" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputAgeoBirth" class="col-sm-3 col-form-label"
+                  >Gestational Age at Birth</label
+                >
+                <div class="col-sm-2">
+                  <div class="input-group mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Age ( Age at Birth in weeks)"
+                      id="inAgeoBirth"
+                    />
+                    <span class="input-group-text">weeks</span>
+                  </div>
+                  <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputBirWeight" class="col-sm-3 col-form-label"
+                  >Birth Weight</label
+                >
+                <div class="col-sm-2">
+                  <div class="input-group mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Weight ( Weight at Birth in kg)"
+                      id="inBirWeight"
+                    />
+                    <span class="input-group-text">kg</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputBirHeight" class="col-sm-3 col-form-label"
+                  >Height</label
+                >
+                <div class="col-sm-2">
+                  <div class="input-group mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Height ( Height at Birth in cm)"
+                      id="inBirHeight"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3">
+                <label for="inputHeadCirc" class="col-sm-3 col-form-label"
+                  >Head Circumference</label
+                >
+                <div class="col-sm-2">
+                  <div class="input-group mb-3">
+                    <input
+                      type="number"
+                      class="form-control"
+                      aria-label="Length ( Head Length at Birth in cm)"
+                      id="inHeadCirc"
+                    />
+                    <span class="input-group-text">cm</span>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="col-md-6 text-start">
+                <h6 class="row mb-3">Sex</h6>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inRadMale"
+                    value="option1"
+                  />
+                  <label class="form-check-label" for="inRadMale">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inRadFemale"
+                    value="option2"
+                  />
+                  <label class="form-check-label" for="inRadFemale"
+                    >Female</label
+                  >
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inRadNone"
+                    value="option3"
+                  />
+                  <label class="form-check-label" for="inRadNone"
+                    >Unidentified</label
+                  >
+                </div>
+              </div>
+              <hr />
+              <div class="row g-2">
+                <div class="col-sm-6 col-xl-3">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="floatSickleCell"
+                      aria-label="Floating label select example"
+                      style="width: 200px"
+                    >
+                      <option selected>Select Status</option>
+                      <option value="1">Active</option>
+                      <option value="2">Inactive</option>
+                    </select>
+                    <label for="floatingSelect">Sickle Cell Status</label>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-xl-3">
+                  <div class="form-floating mb-3">
+                    <select
+                      class="form-select"
+                      id="floatG6pd"
+                      aria-label="Floating label select example"
+                      style="width: 200px"
+                    >
+                      <option selected>Select Status</option>
+                      <option value="1">Active</option>
+                      <option value="2">Inactive</option>
+                    </select>
+                    <label for="floatingSelect">G6PD Status</label>
+                  </div>
+                </div>
+              </div>
+              <hr />
+              <div class="row mb-3">
+                <label for="inputNhisNum" class="col-sm-2 col-form-label"
+                  >NHIS No.</label
+                >
+                <div class="col-sm-3">
+                  <input type="number" class="form-control" id="inNhisNum" />
+                </div>
+              </div>
+              <hr />
+              <div class="col-sm-6">
+                <!--<button type="submit" id="cancelBtn" onclick="" value="typography.html" class="btn btn-primary">Cancel</button>-->
+                <!--<button type="submit" id="saveBtn" href="typography.html" class="btn btn-primary">Save</button>-->
+                <!--<a class="btn btn-primary" href="#">Cancel</a>
+                            <a class="btn btn-primary" href="typography.html">Add</a>-->
+              </div>
+              <input type="submit" value="Save" class="btn btn-primary" id="submitreg"/>
+              <input type="submit" value="Cancel" class="btn btn-primary" id="cancelreg"/>
+            </form>
+            <div id="btn_contain">
+              <button onclick="save()">Save</button>
+            </div>
+          </div>
         </div>
-        <!-- Content End -->
+        <!-- Child Registration End -->
 
+        <!-- Footer Start -->
+        <div class="container-fluid pt-4 px-4">
+          <div class="bg-light rounded-top p-4">
+            <div class="row">
+              <div class="col-12 col-sm-6 text-center text-sm-start">
+                &copy; <a href="#">Your Site Name</a>, All Right Reserved.
+              </div>
+              <div class="col-12 col-sm-6 text-center text-sm-end">
+                <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Footer End -->
+      </div>
+      <!-- Content End -->
 
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+      <!-- Back to Top -->
+      <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"
+        ><i class="bi bi-arrow-up"></i
+      ></a>
     </div>
 
     <!-- JavaScript Libraries -->
@@ -325,9 +488,76 @@
     <script src="lib/tempusdominus/js/moment.min.js"></script>
     <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="js/index.js"></script>
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+  </body>
+<!--  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
+  <script src="js/script.js"></script>-->
+
+
+    <!-- Script trial --
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD_8o5oClucqlPNkULa9X0SHa9Pmu09ioY",
+          authDomain: "test-main-jtrial1.firebaseapp.com",
+          databaseURL: "https://test-main-jtrial1-default-rtdb.firebaseio.com",
+          projectId: "test-main-jtrial1",
+          storageBucket: "test-main-jtrial1.appspot.com",
+          messagingSenderId: "104134444111",
+          appId: "1:104134444111:web:6b41470a8c9660690bd63a",
+          measurementId: "G-XLKWBYGLM4"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import {getDatabase, ref, child, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+
+        const db = getDatabase()
+
+        let inSerial= document.getElementById('inSerial').value;
+        let inRegNum= document.getElementById('inRegNum').value;
+        let inHospName= document.getElementById('inHospName').value;
+        let inDoFirst= document.getElementById('inDoFirst').value;
+        let inBirRegNum= document.getElementById('inBirRegNum').value;
+        let inChildName= document.getElementById("inChildName").value;
+
+        let saveBtn = document.getElementById('submitreg')
+
+        function AddData(){
+            set(ref(db, 'ChildRecord/' + inSerial.value),{
+                nameofchild: inChildName.value,
+                childregistrationno: Number(inRegNum.value),
+                nameofhospital: inHospName.value,
+                birthregistrationno: Number(inBirRegNum.value),
+                childserialno: Number(inSerial.value)
+
+            }).then(()=>{
+                alert("Registration Successfull !!!");
+            }).catch((Error)=>{
+                alert("Unsuccessful !!!");
+                console.log(error);
+
+            })
+        }
+
+        saveBtn.addEventListener('click', AddData);
+      </script>
+    
+    !-- Script trial -->
 
 </html>
