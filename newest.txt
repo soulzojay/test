@@ -1,0 +1,342 @@
+            
+        <div class="row mb-3">
+          <label
+            for="inputSerial"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Serial No. for Child</label
+          >
+          <div class="col-sm-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inSerial"
+              placeholder="Serial No."
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label
+            for="inputRegNum"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Registration No. for Child</label
+          >
+          <div class="col-sm-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inRegNum"
+              placeholder="Registration No."
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label
+            for="inputHospName"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Name of Health Facility</label
+          >
+          <div class="col-sm-4">
+            <input
+              type="text"
+              class="form-control"
+              id="inHospName"
+              placeholder="Health Facility"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inDputoFirst" class="col-sm-3 col-form-label"
+            >Date of First Seen</label
+          >
+          <div class="col-sm-3">
+            <input
+              type="text"
+              class="form-control"
+              id="inDoFirst"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirRegNum" class="col-sm-3 col-form-label"
+            >Birth Registration No.</label
+          >
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="inBirRegNum" 
+            placeholder="Birth Registration No."/>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputChildName" class="col-sm-3 col-form-label"
+            >Child's Name</label
+          >
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="inChildName" placeholder="Child's Full Name" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputDoBirth" class="col-sm-3 col-form-label"
+            >Date of Birth</label
+          >
+          <div class="col-sm-3">
+            <input type="date" class="form-control" id="inDoBirth"/>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputAgeoBirth" class="col-sm-3 col-form-label"
+            >Gestational Age at Birth</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Age ( Age at Birth in weeks)"
+                id="inAgeoBirth"
+              />
+              <span class="input-group-text">weeks</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirWeight" class="col-sm-3 col-form-label"
+            >Birth Weight</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Weight ( Weight at Birth in kg)"
+                id="inBirWeight"
+              />
+              <span class="input-group-text">kg</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirHeight" class="col-sm-3 col-form-label"
+            >Birth Height</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Height ( Height at Birth in cm)"
+                id="inBirHeight"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputHeadCirc" class="col-sm-3 col-form-label"
+            >Head Circumference</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Length ( Head Length at Birth in cm)"
+                id="inHeadCirc"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="col-md-6 text-start">
+          <h6 class="row mb-3">Gender</h6>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadMale"
+            />
+            <label class="form-check-label" for="inRadMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadFemale"
+            />
+            <label class="form-check-label" 				for="inRadFemale">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadNone"
+            />
+            <label class="form-check-label" for="inRadNone"
+              >Unidentified</label
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="row g-2">
+          <div class="col-sm-6 col-xl-3">
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="inFloatSickleCell"
+                aria-label="Floating label select example"
+                style="width: 200px"
+              >
+                <option selected>Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+              <label for="floatingSelect">Sickle Cell Status</label>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="inFloatG6pd"
+                aria-label="Floating label select example"
+                style="width: 200px"
+              >
+                <option selected>Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+              <label for="floatingSelect">G6PD Status</label>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row mb-3">
+          <label for="inputNhisNum" class="col-sm-2 col-form-label"
+            >NHIS No.</label
+          >
+          <div class="col-sm-3">
+            <input type="number" class="form-control" id="inNhisNum"  		placeholder="NHIS No."/>
+          </div>
+        </div>
+        <hr />
+
+        <button class="btn btn-primary" id="submitreg">Save</button>
+        <button class="btn btn-primary" id="cancelreg">Save</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebasConfig = {
+        apiKey: "AIzaSyDoJj2Bp65N1WnioYyMpUz69-z0oP2A40c",
+        authDomain: "infanthealth.firebaseapp.com",
+        databaseURL:
+          "https://infanthealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "infanthealth",
+        storageBucket: "infanthealth.appspot.com",
+        messagingSenderId: "382038592776",
+        appId: "1:382038592776:web:419414a372d8c3372db0bd",
+      };
+
+      // Initialize Firebase
+      const apps = initializeApp(firebasConfig);
+
+      import {
+        getDatabase,
+        set,
+        update,
+        remove,
+        ref,
+        child,
+      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+      const cb = getDatabase();
+
+      var inSerial = document.querySelector("#inSerial");
+      var inRegNum= document.querySelector("#inRegNum");
+      var inHospName = document.querySelector("#inHospName");
+      var inDoFirst = document.querySelector("#inDoFirst");
+      var inBirRegNum = document.querySelector("#inBirRegNum");
+      var inChildName = document.querySelector("#inChildName");
+      var inDoBirth = document.querySelector("#inDoBirth");
+      var inAgeoBirth = document.querySelector("#inAgeoBirth");
+      var inBirWeight = document.querySelector("#inBirWeight");
+      var inBirHeight = document.querySelector("#inBirHeight");
+      var inHeadCirc = document.querySelector("#inHeadCirc");
+      var inNhisNum = document.querySelector("#inNhisNum");
+
+
+      var Male = document.querySelector("#inRadMale");
+      var Female = document.querySelector("#inRadFemale");
+      var None = document.querySelector("#inRadNone");
+      var gender;
+
+      var inFloatSickleCell = document.querySelector("#inFloatSickleCell");
+      var inFloatG6pd = document.querySelector("#inFloatG6pd");
+
+
+      var sickle = document.getElementById("inFloatSickleCell");
+      var g6pd = document.getElementById("inFloatG6pd");
+      var sickleSelect= (sickle.options[select.selectedIndex].value);
+      var g6pdSelect= (g6pd.options[select.selectedIndex].value);
+      
+      var saveBtn = document.querySelector("#submitreg");
+
+
+        if (male.checked == true) {
+          gender = "male";
+        } else if (female.checked == true) {
+          gender = "female";
+        } else if (none.checked == true) {
+          gender = "undefined";
+        }
+        set(ref(db, "ChildRecord/" + inSerial.value), {
+
+          Nhis Number: inNhisNum.value,
+          Head Circumference: inHeadCirc.value,
+          Birth Height: inBirHeight.value,
+          Birth Weight: inBirWeight.value,
+          Gestational Age at Birth: inAgeaBirth.value,
+          Date of Birth: inDoBirth.value,
+          Child Name: inChildName.value,
+          Birth Registration Number: inBirRegNum.value,
+          Date First Seen: inDoFirst.value,
+          Hospital Name: inHospName.value,
+          Child Registration Number: inRegNum.value,
+          Child Serial No: inSerial.value,
+          Sickle Cell Status: sickle.value,
+          G6pd Status: g6pd.value,
+          Gender: gender
+
+        })
+          .then(() => {
+            alert("Data added successfully");
+          })
+          .catch((error) => {
+            alert("Error");
+          });
+      }
+
+      saveBtn.addEventListener("click", InsertedData);
+    </script>

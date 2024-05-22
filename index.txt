@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="script.js"></script>-->
+
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Child Registration Start -->
+    <div id="enterDetails" type="text">
+      <h1>Enter details</h1>
+      <h4>ID</h4>
+      <input id="enterID" type="text" />
+
+      <h4>Name</h4>
+      <input id="enterName" type="text" />
+
+      <h4>Age</h4>
+      <input id="enterAge" type="number" /> <br /><br />
+
+      Gender:
+      <input type="radio" name="gender" id="male" /> Male
+      <input type="radio" name="gender" id="female" /> Female
+      <input type="radio" name="gender" id="undefined" />undefined <br />
+      True/False:
+        <select id="floatSickleCel">
+            <option value="Active">Active</option>
+            <option value="Inactive">Inactive</option>
+        </select><br/>
+
+        <div class="col-sm-3">
+            <input type="date" class="form-control" id="inDoBirt" />
+        </div>    
+
+      <button id="insert">INSERT</button><br /><br />
+    </div>
+
+    <script type="text/javascript">
+      var insertBtn = document.querySelector("#insert");
+
+      function getValue(){
+      var currentTime= Date.now
+      alert(ref)}
+
+      var ref=firebaseConfig.dabase().ref('timestamp').set({
+        [currentTime]: true
+      })
+       insertBtn.addEventListener('click', getValue);
+    </script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebasConfig = {
+        apiKey: "AIzaSyDoJj2Bp65N1WnioYyMpUz69-z0oP2A40c",
+        authDomain: "infanthealth.firebaseapp.com",
+        databaseURL:
+          "https://infanthealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "infanthealth",
+        storageBucket: "infanthealth.appspot.com",
+        messagingSenderId: "382038592776",
+        appId: "1:382038592776:web:419414a372d8c3372db0bd",
+      };
+
+      // Initialize Firebase
+      const apps = initializeApp(firebasConfig);
+
+      import {
+        getDatabase,
+        set,
+        update,
+        remove,
+        ref,
+        child,
+      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+      const cb = getDatabase();
+
+      var enterID = document.querySelector("#enterID");
+      var enterName = document.querySelector("#enterName");
+      var enterAge = document.querySelector("#enterAge");
+
+      var insertBtn = document.querySelector("#insert");
+      
+      var dateofbirth = document.getElementById("floatSickleCel");
+      var select= document.getElementById("floatSickleCel");
+
+      function InsertData() {
+        var male = document.querySelector("#male");
+        var female = document.querySelector("#female");
+        var ffemale = document.querySelector("#undefined");
+        var gender;
+
+        var sickle= (select.options[select.selectedIndex].value);
+
+        if (male.checked == true) {
+          gender = "male";
+        } else if (female.checked == true) {
+          gender = "female";
+        } else if (ffemale.checked == true) {
+          gender = "undefined";
+        }
+
+        set(ref(cb, "Childin/" + enterID.value), {
+          name: enterName.value,
+          ID: enterID.value,
+          Age: enterAge.value,
+          Gender: gender,
+          Status: sickle
+          //    true_false: userTrueFalse
+        })
+          .then(() => {
+            alert("Data added successfully");
+          })
+          .catch((error) => {
+            alert("Error");
+          });
+      }
+
+ //4  insertBtn.addEventListener("click", InsertData);
+    </script>
+
+    <!-- Child Registration Stop -->
+
+    <!-- Child Registration Start -->
+    <div class="">
+      <div class="">
+        <div class="">
+          <h6 class="mb-0">Child Registration</h6>
+        </div>
+
+        <div class="row mb-3">
+          <label
+            for="inputSerial"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Serial No. for Child</label
+          >
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="inSerial" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label
+            for="inputRegNum"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Registration No. for Child</label
+          >
+          <div class="col-sm-3">
+            <input type="number" class="form-control" id="inRegNum" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label
+            for="inputHospName"
+            class="col-sm-3 col-form-label"
+            style="text-align: right"
+            >Name of Health Facility</label
+          >
+          <div class="col-sm-4">
+            <input type="text" class="form-control" id="inHospName" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inDputoFirst" class="col-sm-3 col-form-label"
+            >Date of First Seen</label
+          >
+          <div class="col-sm-3">
+            <input
+              type="date"
+              class="form-control"
+              id="inDoFirst"
+              style="text-align: end"
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirRegNum" class="col-sm-3 col-form-label"
+            >Birth Registration No.</label
+          >
+          <div class="col-sm-3">
+            <input type="number" class="form-control" id="inBirRegNum" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputChildName" class="col-sm-3 col-form-label"
+            >Child's Name</label
+          >
+          <div class="col-sm-3">
+            <input type="text" class="form-control" id="inChildName" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputDoBirth" class="col-sm-3 col-form-label"
+            >Date of Birth</label
+          >
+          <div class="col-sm-3">
+            <input type="date" class="form-control" id="inDoBirth" />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputAgeoBirth" class="col-sm-3 col-form-label"
+            >Gestational Age at Birth</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Age ( Age at Birth in weeks)"
+                id="inAgeaBirth"
+              />
+              <span class="input-group-text">weeks</span>
+            </div>
+            <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirWeight" class="col-sm-3 col-form-label"
+            >Birth Weight</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Weight ( Weight at Birth in kg)"
+                id="inBirWeight"
+              />
+              <span class="input-group-text">kg</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputBirHeight" class="col-sm-3 col-form-label"
+            >Height</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Height ( Height at Birth in cm)"
+                id="inBirHeight"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="inputHeadCirc" class="col-sm-3 col-form-label"
+            >Head Circumference</label
+          >
+          <div class="col-sm-2">
+            <div class="input-group mb-3">
+              <input
+                type="number"
+                class="form-control"
+                aria-label="Length ( Head Length at Birth in cm)"
+                id="inHeadCirc"
+              />
+              <span class="input-group-text">cm</span>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="col-md-6 text-start">
+          <h6 class="row mb-3">Sex</h6>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadMale"
+              value="inRadMale"
+            />
+            <label class="form-check-label" for="inRadMale">Male</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadFemale"
+              value="inRadFemale"
+            />
+            <label class="form-check-label" for="inRadFemale">Female</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="inlineRadioOptions"
+              id="inRadNone"
+              value="inRadNone"
+            />
+            <label class="form-check-label" for="inRadNone">Unidentified</label>
+          </div>
+        </div>
+        <hr />
+        <div class="row g-2">
+          <div class="col-sm-6 col-xl-3">
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="floatSickleCell"
+                aria-label="Floating label select example"
+                style="width: 200px"
+              >
+                <option selected>Select Status</option>
+                <option value="1">Active</option>
+                <option value="2">Inactive</option>
+              </select>
+              <label for="floatingSelect">Sickle Cell Status</label>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3">
+            <div class="form-floating mb-3">
+              <select
+                class="form-select"
+                id="floatG6pd"
+                aria-label="Floating label select example"
+                style="width: 200px"
+              >
+                <option selected>Select Status</option>
+                <option value="Active">Active</option>
+                <option value="Inactive">Inactive</option>
+              </select>
+              <label for="floatingSelect">G6PD Status</label>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row mb-3">
+          <label for="inputNhisNum" class="col-sm-2 col-form-label"
+            >NHIS No.</label
+          >
+          <div class="col-sm-3">
+            <input id="inNhisNum" type="number" class="form-control" />
+          </div>
+        </div>
+        <hr />
+        <div class="col-sm-6">
+          <!--<button type="submit" id="cancelBtn" onclick="" value="typography.html" class="btn btn-primary">Cancel</button>-->
+          <!--<button type="submit" id="saveBtn" href="typography.html" class="btn btn-primary">Save</button>-->
+          <!--<a class="btn btn-primary" href="#">Cancel</a>
+                            <a class="btn btn-primary" href="typography.html">Add</a>-->
+        </div>
+        <button class="btn btn-primary" id="submitreg">Save</button>
+      </div>
+    </div>
+
+    <!-- Database try start here -->
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyDoJj2Bp65N1WnioYyMpUz69-z0oP2A40c",
+        authDomain: "infanthealth.firebaseapp.com",
+        databaseURL:
+          "https://infanthealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "infanthealth",
+        storageBucket: "infanthealth.appspot.com",
+        messagingSenderId: "382038592776",
+        appId: "1:382038592776:web:419414a372d8c3372db0bd",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      import {
+        getDatabase,
+        set,
+        update,
+        remove,
+        ref,
+        child,
+      } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+      const db = getDatabase();
+
+      var inSerial = document.querySelector("#inSerial");
+      var inRegNum = document.querySelector("#inRegNum");
+      var inHospName = document.querySelector("#inHospName");
+    //  var inDoFirst= document.querySelector("#inDoFirst");
+      var inBirRegNum = document.querySelector("#inBirRegNum");
+      var inChildName = document.querySelector("#inChildName");
+      var inDoBirth= document.querySelector("#inDoBirth");
+    //  var inAgeaBirth = document.querySelector("#inAgeaBirth");
+      var inBirWeight = document.querySelector("#inBirWeight");
+      var inBirHeight = document.querySelector("#inBirHeight");
+      var inHeadCirc = document.querySelector("#inHeadCirc");
+      var inNhisNum = document.querySelector("#inNhisNum");
+      var select= document.getElementById("floatSickleCell");
+      var selecta= document.getElementById("floatG6pd");
+
+      var saveBtn = document.querySelector("#submitreg");
+
+      function InsertedData() {
+        var male = document.querySelector("#male");
+        var female = document.querySelector("#female");
+        var undefined = document.querySelector("#undefined");
+        var gender;
+
+        var g6pd= (selecta.options[select.selectedIndex].value);
+        var sickle= (select.options[select.selectedIndex].value);
+
+        if (male.checked == true) {
+          gender = "male";
+        } else if (female.checked == true) {
+          gender = "female";
+        } else if (undefined.checked == true) {
+          gender = "undefined";
+        }
+
+        set(ref(db, "ChildRecordss/" + inSerial.value), {
+          NhisNumber: inNhisNum.value,
+          HeadCircumference: inHeadCirc.value,
+          BirthHeight: inBirHeight.value,
+          BirthWeight: inBirWeight.value,
+          GestationalAgeatBirth: inAgeaBirth.value,
+        //  DateofBirth: inDoBirth.value,
+          ChildName: inChildName.value,
+          BirthRegistrationNumber: inBirRegNum.value,
+         // DateFirstSeen: inDoFirst.value,
+          HospitalName: inHospName.value,
+          ChildRegistrationNumber: inRegNum.value,
+          ChildSerial: inSerial.value,
+          SickleCellstatus: sickle.value,
+          G6pdStatus: g6pd.value,
+          Gender:gender
+
+        })
+          .then(() => {
+            alert("Data added successfully");
+          })
+          .catch((error) => {
+            alert("Error");
+          });
+      }
+
+      saveBtn.addEventListener("click", InsertedData);
+    </script>
+
+    <!-- Database try end here -->
+
+    <!-- Child Registration End -->
+  </body>
+</html>

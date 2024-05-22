@@ -13,24 +13,33 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"/>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&display=swap"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+    />
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"/>
+    <link
+      rel="stylesheet"
+      href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"
+    />
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
-
-    <!-- firebase Stylesheet -->
-    <script type="module" src="/src/index.js"></script>
   </head>
 
   <body>
@@ -112,7 +121,7 @@
                 <a href="nutrition.html" class="dropdown-item">Nutri Counsel</a>
                 <hr class="dropdown-divider" />
                 <a href="immunization.html" class="dropdown-item"
-                  >Vacc & Immun</a
+                  >Vacc [&] Immun</a
                 >
                 <hr class="dropdown-divider" />
               </div>
@@ -206,250 +215,239 @@
             <div class="d-flex align-items-center justify-content-between mb-4">
               <h6 class="mb-0">Child Registration</h6>
             </div>
-            <form>
-              <div class="row mb-3">
-                <label
-                  for="inputSerial"
-                  class="col-sm-3 col-form-label"
-                  style="text-align: right"
-                  >Serial No. for Child</label
-                >
-                <div class="col-sm-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inSerial"
-                    placeholder="Serial No."
-                  />
-                </div>
+            <div class="row mb-3">
+              <label
+                for="inputSerial"
+                class="col-sm-3 col-form-label"
+                style="text-align: right"
+                >Serial No. for Child</label
+              >
+              <div class="col-sm-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inSerial"
+                  placeholder="Serial No."
+                />
               </div>
-              <div class="row mb-3">
-                <label
-                  for="inputRegNum"
-                  class="col-sm-3 col-form-label"
-                  style="text-align: right"
-                  >Registration No. for Child</label
-                >
-                <div class="col-sm-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inRegNum"
-                    placeholder="Registration No."
-                  />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label
-                  for="inputHospName"
-                  class="col-sm-3 col-form-label"
-                  style="text-align: right"
-                  >Name of Health Facility</label
-                >
-                <div class="col-sm-4">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inHospName"
-                    placeholder="Health Facility"
-                  />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inDputoFirst" class="col-sm-3 col-form-label"
-                  >Date of First Seen</label
-                >
-                <div class="col-sm-3">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="inDoFirst"
-                    style="text-align: end"
-                  />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputBirRegNum" class="col-sm-3 col-form-label"
-                  >Birth Registration No.</label
-                >
-                <div class="col-sm-3">
-                  <input type="text" class="form-control" id="inBirRegNum" />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputChildName" class="col-sm-3 col-form-label"
-                  >Child's Name</label
-                >
-                <div class="col-sm-3">
-                  <input type="text" class="form-control" id="inChildName" />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputDoBirth" class="col-sm-3 col-form-label"
-                  >Date of Birth</label
-                >
-                <div class="col-sm-3">
-                  <input type="date" class="form-control" id="inDoBirth" />
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputAgeoBirth" class="col-sm-3 col-form-label"
-                  >Gestational Age at Birth</label
-                >
-                <div class="col-sm-2">
-                  <div class="input-group mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      aria-label="Age ( Age at Birth in weeks)"
-                      id="inAgeoBirth"
-                    />
-                    <span class="input-group-text">weeks</span>
-                  </div>
-                  <!--     <input type="date" class="form-control" id="inputDoBirth">  -->
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputBirWeight" class="col-sm-3 col-form-label"
-                  >Birth Weight</label
-                >
-                <div class="col-sm-2">
-                  <div class="input-group mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      aria-label="Weight ( Weight at Birth in kg)"
-                      id="inBirWeight"
-                    />
-                    <span class="input-group-text">kg</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputBirHeight" class="col-sm-3 col-form-label"
-                  >Height</label
-                >
-                <div class="col-sm-2">
-                  <div class="input-group mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      aria-label="Height ( Height at Birth in cm)"
-                      id="inBirHeight"
-                    />
-                    <span class="input-group-text">cm</span>
-                  </div>
-                </div>
-              </div>
-              <div class="row mb-3">
-                <label for="inputHeadCirc" class="col-sm-3 col-form-label"
-                  >Head Circumference</label
-                >
-                <div class="col-sm-2">
-                  <div class="input-group mb-3">
-                    <input
-                      type="number"
-                      class="form-control"
-                      aria-label="Length ( Head Length at Birth in cm)"
-                      id="inHeadCirc"
-                    />
-                    <span class="input-group-text">cm</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="col-md-6 text-start">
-                <h6 class="row mb-3">Sex</h6>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inRadMale"
-                    value="option1"
-                  />
-                  <label class="form-check-label" for="inRadMale">Male</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inRadFemale"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="inRadFemale"
-                    >Female</label
-                  >
-                </div>
-                <div class="form-check form-check-inline">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="inlineRadioOptions"
-                    id="inRadNone"
-                    value="option3"
-                  />
-                  <label class="form-check-label" for="inRadNone"
-                    >Unidentified</label
-                  >
-                </div>
-              </div>
-              <hr />
-              <div class="row g-2">
-                <div class="col-sm-6 col-xl-3">
-                  <div class="form-floating mb-3">
-                    <select
-                      class="form-select"
-                      id="floatSickleCell"
-                      aria-label="Floating label select example"
-                      style="width: 200px"
-                    >
-                      <option selected>Select Status</option>
-                      <option value="1">Active</option>
-                      <option value="2">Inactive</option>
-                    </select>
-                    <label for="floatingSelect">Sickle Cell Status</label>
-                  </div>
-                </div>
-                <div class="col-sm-6 col-xl-3">
-                  <div class="form-floating mb-3">
-                    <select
-                      class="form-select"
-                      id="floatG6pd"
-                      aria-label="Floating label select example"
-                      style="width: 200px"
-                    >
-                      <option selected>Select Status</option>
-                      <option value="1">Active</option>
-                      <option value="2">Inactive</option>
-                    </select>
-                    <label for="floatingSelect">G6PD Status</label>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div class="row mb-3">
-                <label for="inputNhisNum" class="col-sm-2 col-form-label"
-                  >NHIS No.</label
-                >
-                <div class="col-sm-3">
-                  <input type="number" class="form-control" id="inNhisNum" />
-                </div>
-              </div>
-              <hr />
-              <div class="col-sm-6">
-                <!--<button type="submit" id="cancelBtn" onclick="" value="typography.html" class="btn btn-primary">Cancel</button>-->
-                <!--<button type="submit" id="saveBtn" href="typography.html" class="btn btn-primary">Save</button>-->
-                <!--<a class="btn btn-primary" href="#">Cancel</a>
-                            <a class="btn btn-primary" href="typography.html">Add</a>-->
-              </div>
-              <input type="submit" value="Save" class="btn btn-primary" id="submitreg"/>
-              <input type="submit" value="Cancel" class="btn btn-primary" id="cancelreg"/>
-            </form>
-            <div id="btn_contain">
-              <button onclick="save()">Save</button>
             </div>
+            <div class="row mb-3">
+              <label
+                for="inputRegNum"
+                class="col-sm-3 col-form-label"
+                style="text-align: right"
+                >Registration No. for Child</label
+              >
+              <div class="col-sm-4">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inRegNum"
+                  placeholder="Registration No."
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label
+                for="inputHospName"
+                class="col-sm-3 col-form-label"
+                style="text-align: right"
+                >Name of Health Facility</label
+              >
+              <div class="col-sm-5">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inHospName"
+                  placeholder="Health Facility"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inDputoFirst" class="col-sm-3 col-form-label"
+                >Date of First Seen</label
+              >
+              <div class="col-sm-3">
+                <input
+                  type="date"
+                  class="form-control"
+                  id="inDoFirst"
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputBirRegNum" class="col-sm-3 col-form-label"
+                >Birth Registration No.</label
+              >
+              <div class="col-sm-4">
+                <input type="text" class="form-control" id="inBirRegNum" 
+                placeholder="Birth Registration No."/>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputChildName" class="col-sm-3 col-form-label"
+                >Child's Name</label
+              >
+              <div class="col-sm-5">
+                <input type="text" class="form-control" id="inChildName"
+                placeholder="Child's Full Name" />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputDoBirth" class="col-sm-3 col-form-label"
+                >Date of Birth</label
+              >
+              <div class="col-sm-3">
+                <input type="date" class="form-control" id="inDoBirth"/>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputAgeoBirth" class="col-sm-3 col-form-label"
+                >Gestational Age at Birth</label
+              >
+              <div class="col-sm-3">
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    aria-label="Age ( Age at Birth in weeks)"
+                    id="inAgeoBirth"
+                  />
+                  <span class="input-group-text">weeks</span>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputBirWeight" class="col-sm-3 col-form-label"
+                >Birth Weight</label
+              >
+              <div class="col-sm-3">
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    aria-label="Weight ( Weight at Birth in kg)"
+                    id="inBirWeight"
+                  />
+                  <span class="input-group-text">kg</span>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputBirHeight" class="col-sm-3 col-form-label"
+                >Birth Height</label
+              >
+              <div class="col-sm-3">
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    aria-label="Height ( Height at Birth in cm)"
+                    id="inBirHeight"
+                  />
+                  <span class="input-group-text">cm</span>
+                </div>
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputHeadCirc" class="col-sm-3 col-form-label"
+                >Head Circumference</label
+              >
+              <div class="col-sm-3">
+                <div class="input-group mb-3">
+                  <input
+                    type="number"
+                    class="form-control"
+                    aria-label="Length ( Head Length at Birth in cm)"
+                    id="inHeadCirc"
+                  />
+                  <span class="input-group-text">cm</span>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="col-md-6 text-start">
+              <h6 class="row mb-3">Gender</h6>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inRadMale"
+                />
+                <label class="form-check-label"
+                for="inRadMale">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inRadFemale"
+                />
+                <label class="form-check-label"
+                for="inRadFemale">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="inlineRadioOptions"
+                  id="inRadNone"
+                />
+                <label class="form-check-label" for="inRadNone"
+                  >Unidentified</label
+                >
+              </div>
+            </div>
+            <hr />
+            <div class="row g-2">
+              <div class="col-sm-6 col-xl-3">
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-select"
+                    id="inFloatSickleCell"
+                    aria-label="Floating label select example"
+                    style="width: 200px"
+                  >
+                    <option selected>Select Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                  </select>
+                  <label for="floatingSelect">Sickle Cell Status</label>
+                </div>
+              </div>
+              <div class="col-sm-6 col-xl-3">
+                <div class="form-floating mb-3">
+                  <select
+                    class="form-select"
+                    id="inFloatG6pd"
+                    aria-label="Floating label select example"
+                    style="width: 200px"
+                  >
+                    <option selected>Select Status</option>
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                  </select>
+                  <label for="floatingSelect">G6PD Status</label>
+                </div>
+              </div>
+            </div>
+            <hr />
+            <div class="row mb-3">
+              <label for="inputNhisNum" class="col-sm-2 col-form-label"
+                >NHIS No.</label
+              >
+              <div class="col-sm-4">
+                <input type="number" class="form-control" id="inNhisNum"
+                placeholder="NHIS No."/>
+              </div>
+            </div>
+            <hr />
+    
+            <button class="btn btn-primary" id="submitreg">Save</button>
+            <a class="btn btn-primary" id="">Cancel</a>
+    
           </div>
         </div>
         <!-- Child Registration End -->
@@ -478,6 +476,104 @@
       ></a>
     </div>
 
+    
+
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebasConfig = {
+        apiKey: "AIzaSyDoJj2Bp65N1WnioYyMpUz69-z0oP2A40c",
+        authDomain: "infanthealth.firebaseapp.com",
+        databaseURL:
+          "https://infanthealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+        projectId: "infanthealth",
+        storageBucket: "infanthealth.appspot.com",
+        messagingSenderId: "382038592776",
+        appId: "1:382038592776:web:419414a372d8c3372db0bd",
+      };
+
+      // Initialize Firebase
+      const apps = initializeApp(firebasConfig);
+
+      import { getDatabase, set, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+      const db = getDatabase();
+
+      var inSerial = document.querySelector("#inSerial");
+      var inRegNum= document.querySelector("#inRegNum");
+      var inHospName = document.querySelector("#inHospName");
+      var inDoFirst = document.querySelector("#inDoFirst");
+      var inBirRegNum = document.querySelector("#inBirRegNum");
+      var inChildName = document.querySelector("#inChildName");
+      var inDoBirth = document.querySelector("#inDoBirth");
+      var inAgeaBirth = document.querySelector("#inAgeoBirth");
+      var inBirWeight = document.querySelector("#inBirWeight");
+      var inBirHeight = document.querySelector("#inBirHeight");
+      var inHeadCirc = document.querySelector("#inHeadCirc");
+      var inNhisNum = document.querySelector("#inNhisNum");
+
+      var saveBtn = document.querySelector("#submitreg");
+      
+      function InsertedData(){
+
+      var male = document.querySelector("#inRadMale");
+      var female = document.querySelector("#inRadFemale");
+      var none = document.querySelector("#inRadNone");
+      var gender;
+
+      var inFloatSickleCell = document.querySelector("#inFloatSickleCell");
+      var inFloatG6pd = document.querySelector("#inFloatG6pd");
+
+
+      var sickle = document.getElementById("inFloatSickleCell");
+      var g6pd = document.getElementById("inFloatG6pd");
+      var sickleSelect= (sickle.options[sickle.selectedIndex].value);
+      var g6pdSelect= (g6pd.options[g6pd.selectedIndex].value);
+      
+
+
+        if (male.checked == true) {
+          gender = "male";
+        } else if (female.checked == true) {
+          gender = "female";
+        } else if (none.checked == true) {
+          gender = "undefined";
+        }
+        set(ref(db, "ChildRecord/" + inSerial.value), {
+
+          Nhis_Number: inNhisNum.value,
+          Head_Circumference: inHeadCirc.value,
+          Birth_Height: inBirHeight.value,
+          Birth_Weight: inBirWeight.value,
+          Gestational_Age_at_Birth: inAgeaBirth.value,
+          Date_of_Birth: inDoBirth.value,
+          Child_Name: inChildName.value,
+          Birth_Registration_Number: inBirRegNum.value,
+          Date_First_Seen: inDoFirst.value,
+          Hospital_Name: inHospName.value,
+          Child_Registration_Number: inRegNum.value,
+          Child_Serial_No: inSerial.value,
+          Sickle_Cell_Status: sickle.value,
+          G6pd_Status: g6pd.value,
+          Gender: gender
+
+        })
+          .then(() => {
+            alert("Data added successfully");
+          })
+          .catch((error) => {
+            alert("Error");
+          });
+        }
+      saveBtn.addEventListener('click', InsertedData);
+
+
+    </script>
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -492,72 +588,4 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
   </body>
-<!--  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
-  <script src="js/script.js"></script>-->
-
-
-    <!-- Script trial --
-
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyD_8o5oClucqlPNkULa9X0SHa9Pmu09ioY",
-          authDomain: "test-main-jtrial1.firebaseapp.com",
-          databaseURL: "https://test-main-jtrial1-default-rtdb.firebaseio.com",
-          projectId: "test-main-jtrial1",
-          storageBucket: "test-main-jtrial1.appspot.com",
-          messagingSenderId: "104134444111",
-          appId: "1:104134444111:web:6b41470a8c9660690bd63a",
-          measurementId: "G-XLKWBYGLM4"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
-        import {getDatabase, ref, child, get, set, update, remove} from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
-
-        const db = getDatabase()
-
-        let inSerial= document.getElementById('inSerial').value;
-        let inRegNum= document.getElementById('inRegNum').value;
-        let inHospName= document.getElementById('inHospName').value;
-        let inDoFirst= document.getElementById('inDoFirst').value;
-        let inBirRegNum= document.getElementById('inBirRegNum').value;
-        let inChildName= document.getElementById("inChildName").value;
-
-        let saveBtn = document.getElementById('submitreg')
-
-        function AddData(){
-            set(ref(db, 'ChildRecord/' + inSerial.value),{
-                nameofchild: inChildName.value,
-                childregistrationno: Number(inRegNum.value),
-                nameofhospital: inHospName.value,
-                birthregistrationno: Number(inBirRegNum.value),
-                childserialno: Number(inSerial.value)
-
-            }).then(()=>{
-                alert("Registration Successfull !!!");
-            }).catch((Error)=>{
-                alert("Unsuccessful !!!");
-                console.log(error);
-
-            })
-        }
-
-        saveBtn.addEventListener('click', AddData);
-      </script>
-    
-    !-- Script trial -->
-
 </html>

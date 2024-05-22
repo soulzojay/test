@@ -29,6 +29,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -54,15 +55,15 @@
                             <h3>Sign Up</h3>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="floatingText" placeholder="jhondoe">
+                            <input type="text" class="form-control" id="suUser" placeholder="jhondoe">
                             <label for="floatingText">Username</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <input type="text" class="form-control" id="suEmail" placeholder="name@example.com">
                             <label for="floatingInput">Email address</label>
                         </div>
                         <div class="form-floating mb-4">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <input type="text" class="form-control" id="suPass" placeholder="Password">
                             <label for="floatingPassword">Password</label>
                         </div>
                         <div class="d-flex align-items-center justify-content-between mb-4">
@@ -72,7 +73,7 @@
                             </div>
                             <a href="">Forgot Password</a>
                         </div>
-                        <button type="submit" class="btn btn-primary py-3 w-100 mb-4">Sign Up</button>
+                        <button class="btn btn-primary py-3 w-100 mb-4" id="submitapp">SignUp</button>
                         <p class="text-center mb-0">Already have an Account? <a href="signin.html">Sign In</a></p>
                     </div>
                 </div>
@@ -80,6 +81,53 @@
         </div>
         <!-- Sign Up End -->
     </div>
+    
+    <!-- firebase Stylesheet -->
+
+    <script type="module">
+            // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+            // TODO: Add SDKs for Firebase products that you want to use
+            // https://firebase.google.com/docs/web/setup#available-libraries
+          
+            // Your web app's Firebase configuration
+            const firebaseConfig = {
+              apiKey: "AIzaSyDoJj2Bp65N1WnioYyMpUz69-z0oP2A40c",
+              authDomain: "infanthealth.firebaseapp.com",
+              databaseURL: "https://infanthealth-default-rtdb.asia-southeast1.firebasedatabase.app",
+              projectId: "infanthealth",
+              storageBucket: "infanthealth.appspot.com",
+              messagingSenderId: "382038592776",
+              appId: "1:382038592776:web:419414a372d8c3372db0bd"
+            };
+          
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+        
+            import {getDatabase, set, update, remove, ref, child}from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"
+            const db=getDatabase();
+                    
+            var suUser= document.querySelector("#suUser");
+            var suEmail= document.querySelector("#suEmail");
+            var suPass= document.querySelector("#suPass");
+        
+            var insertBtn= document.querySelector("#submitapp");
+        
+            function InsertData(){
+                set(ref(db, "NurseLogin/" + suUser.value),{
+                    name: suUser.value,
+                    password: suPass.value,
+                    email: suEmail.value
+                }).then(()=>{
+                    alert("Data added successfully");
+                }).catch((error)=>{
+                    alert("Error");
+                });
+            }
+        
+            insertBtn.addEventListener('click', InsertData);
+          </script>
+        
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
